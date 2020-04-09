@@ -18,7 +18,7 @@ public class RoadController
         System.out.println("Сколько автомобилей сгенерировать?");
 
         Scanner scanner = new Scanner(System.in);
-        int carsCount = scanner.nextInt();
+        int carsCount = scanner.nextInt();//Переменная
 
         for(int i = 0; i < carsCount; i++)
         {
@@ -32,7 +32,7 @@ public class RoadController
             }
 
             //Проверяем высоту и массу автомобиля, вычисляем стоимость проезда
-            int price = calculatePrice(car);
+            int price = calculatePrice(car);//Переменная
             if(price == -1) {
                 continue;
             }
@@ -46,8 +46,8 @@ public class RoadController
      */
     private static int calculatePrice(Car car)
     {
-        int carHeight = car.height;
-        int price = 0;
+        int carHeight = car.height;//Переменная
+        int price;//Переменная
         if (carHeight > controllerMaxHeight)
         {
             blockWay("высота вашего ТС превышает высоту пропускного пункта!");
@@ -55,22 +55,22 @@ public class RoadController
         }
         else if (carHeight > passengerCarMaxHeight)
         {
-            double weight = car.weight;
+            double weight = car.weight;//Переменная
             //Грузовой автомобиль
             if (weight > passengerCarMaxWeight)
             {
                 price = passengerCarPrice;
                 if (car.hasVehicle) {
-                    price = price + vehicleAdditionalPrice;
+                    price = price + vehicleAdditionalPrice;//Переменная
                 }
             }
             //Легковой автомобиль
             else {
-                price = cargoCarPrice;
+                price = cargoCarPrice;//Переменная
             }
         }
         else {
-            price = passengerCarPrice;
+            price = passengerCarPrice;//Переменная
         }
         return price;
     }
