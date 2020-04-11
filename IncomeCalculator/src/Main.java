@@ -17,26 +17,26 @@ public class Main
 
     private static double minInvestmentsAmount = 100000;
 
+    //Выше переменные int - целое число, double - дробное
+
     public static void main(String[] args)
     {
-        while(true)
+        while(true) //Цикл while. Проверяет условие true
         {
             System.out.println("Введите сумму доходов компании за месяц " +
                 "(от 200 до 900 тысяч рублей): ");
-            int income = (new Scanner(System.in)).nextInt();
+            int income = (new Scanner(System.in)).nextInt(); //Просим юзера ввести через консоль данные
 
-            if(!checkIncomeRange(income)) {
+            if(!checkIncomeRange(income)) { //Если метод checkIncomeRange возвращает false цикл запускается по новой
                 continue;
             }
 
-            double managerSalary = income * managerPercent;
-            double pureIncome = income - managerSalary -
-                calculateFixedCharges();
-            double taxAmount = mainTaxPercent * pureIncome;
-            double pureIncomeAfterTax = pureIncome - taxAmount;
+            double managerSalary = income * managerPercent; //ЗП менеджера считаем
+            double pureIncome = income - managerSalary - calculateFixedCharges(); //Расчет чистого дохода с налогами.
+            double taxAmount = mainTaxPercent * pureIncome; //Расчет налогов
+            double pureIncomeAfterTax = pureIncome - taxAmount; //Чистый доход минус налоги
 
-            boolean canMakeInvestments = pureIncomeAfterTax >=
-                minInvestmentsAmount;
+            boolean canMakeInvestments = pureIncomeAfterTax >= minInvestmentsAmount; //Можем ли сделать инвистицию
 
             System.out.println("Зарплата менеджера: " + managerSalary);
             System.out.println("Общая сумма налогов: " +
@@ -49,7 +49,7 @@ public class Main
         }
     }
 
-    private static boolean checkIncomeRange(int income)
+    private static boolean checkIncomeRange(int income) //Возвращает тру, если вводимое число в диапазаоне от 200к до 900к
     {
         if(income < minIncome)
         {
