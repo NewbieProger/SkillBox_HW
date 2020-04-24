@@ -31,14 +31,22 @@ public class Cat
 
     public double feed(Double amount)
     {
-        weight = weight + amount;
-        foodAmount = amount;
+        if (weight > minWeight && weight < maxWeight) {
+            weight = weight + amount;
+            foodAmount = amount;
+        } else {
+            System.out.println("Кошка ушла внебытие. Нельзя кормить");
+        }
         return foodAmount;
     }
 
     public void drink(Double amount)
     {
-        weight = weight + amount;
+        if (weight > minWeight && weight < maxWeight) {
+            weight = weight + amount;
+        } else {
+            System.out.println("Кошка ушла внебытие. Нельзя поить");
+        }
     }
 
     public Double getWeight()
@@ -61,8 +69,14 @@ public class Cat
     }
 
     public void pee() {
-        weight = weight - 1;
-        System.out.println("http://joxi.ru/l2ZpD56cEnXeXr");
+
+        if (weight > minWeight && weight < maxWeight) {
+            weight = weight - 1;
+            System.out.println("http://joxi.ru/l2ZpD56cEnXeXr");
+        } else {
+            System.out.println("Кошка ушла внебытие. Лоток больше убирать не надо");
+        }
+
     }
 
     public String getStatus()

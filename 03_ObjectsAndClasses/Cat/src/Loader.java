@@ -20,10 +20,10 @@ public class Loader {
         System.out.println(); //Просто отступ
 
 
-        //Кошка
+        //Кошка //Перекармливаем кошку
         Cat cat3 = new Cat();
         System.out.println("Перекармливаем до взрыва: ");
-        while (cat3.getWeight() <= cat3.getMaxWeight()) { //Перекармливаем кошку
+        while (cat3.getWeight() <= cat3.getMaxWeight()) {
 
                 cat3.feed(1000.0);
                 if (cat3.getWeight() >= cat3.getMaxWeight()) {
@@ -44,8 +44,8 @@ public class Loader {
                 }
             }
 
-        //Кошка
-        Cat catC = new Cat(); //Тут жрём и сикаем. Что еще можно от жизни просить?
+        //Кошка //Тут жрём и сикаем. Что еще можно от жизни просить?
+        Cat catC = new Cat();
         System.out.println(); //Просто отступ
 
         System.out.println(catC.getWeight());
@@ -72,14 +72,38 @@ public class Loader {
 
         catV.getWeight();
 
-        //Кошка
+//        Кошка. Тут кормим мертвую кошку
         Cat cat7 = new Cat();
         System.out.println(); //Просто отступ
 
         cat7.getWeight();
+        cat7.feed(10000.0);
+        cat7.getStatus();
+        cat7.feed(1.0);
 
-        System.out.println(Cat.count);
+
+        System.out.println(); //Просто отступ
+        System.out.println(Cat.count); //Количество кошек. Учитывает взрыв и смерть
+
+//            Тут поим мертвую кошку
+        Cat cat8 = new Cat();
+        System.out.println(); //Просто отступ
+
+        cat8.drink(10000.0);
+        System.out.println(cat8.getWeight());
+        cat8.getStatus();
+        cat8.drink(1.0);
+        System.out.println(cat8.getWeight());
 
 
+        //Писаемся до смерти
+        Cat cat9 = new Cat();
+        System.out.println(); //Просто отступ
+
+        cat9.drink(10000.0);
+        cat9.getStatus();
+        cat9.pee();
+
+        System.out.println(cat9.getStatus());
     }
 }
