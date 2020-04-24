@@ -3,6 +3,7 @@ public class Loader {
     public static void main(String[] args) {
         System.out.println(); //Просто отступ
       //Кошка
+
         Cat cat1 = new Cat();
         System.out.println("Cat1 weight: " + cat1.getWeight());
         cat1.feed(3.0);
@@ -76,6 +77,8 @@ public class Loader {
         System.out.println(); //Просто отступ
 
         cat7.getWeight();
+
+        System.out.println(Cat.count);
 
 
     }
