@@ -18,7 +18,7 @@ public class Cat
 
     public void meow()
     {
-        weight = weight - 1;
+        weight = weight - 1000; // Побольше поставил, а то мусора в логах много
         System.out.println("Meow");
     }
 
@@ -37,15 +37,24 @@ public class Cat
         return weight;
     }
 
+    public double getMaxWeight () { //Возвращаем макс. значение массы, чтобы в цикле сравнить
+
+        return maxWeight;
+    }
+
+    public double getMinWeight () { //Возвращаем макс. значение массы, чтобы в цикле сравнить
+        return minWeight;
+    }
+
     public String getStatus()
     {
         if(weight < minWeight) {
             return "Dead";
         }
-        else if(weight > maxWeight) {
+        else if (weight > maxWeight) {
             return "Exploded";
         }
-        else if(weight > originWeight) {
+        else if (weight > originWeight) {
             return "Sleeping";
         }
         else {
