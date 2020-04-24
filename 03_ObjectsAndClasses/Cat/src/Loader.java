@@ -1,10 +1,8 @@
 
-public class Loader
-{
-    public static void main(String[] args)
-    {
+public class Loader {
+    public static void main(String[] args) {
         System.out.println(); //Просто отступ
-
+      //Кошка
         Cat cat1 = new Cat();
         System.out.println("Cat1 weight: " + cat1.getWeight());
         cat1.feed(3.0);
@@ -12,6 +10,7 @@ public class Loader
 
         System.out.println(); //Просто отступ
 
+      //Кошка
         Cat cat2 = new Cat();
             System.out.println("Cat2 weight: " + cat2.getWeight());
             cat2.feed(3.0);
@@ -19,8 +18,10 @@ public class Loader
 
         System.out.println(); //Просто отступ
 
-        Cat cat3 = new Cat();
 
+        //Кошка
+        Cat cat3 = new Cat();
+        System.out.println("Перекармливаем до взрыва: ");
         while (cat3.getWeight() <= cat3.getMaxWeight()) { //Перекармливаем кошку
 
                 cat3.feed(1000.0);
@@ -29,7 +30,7 @@ public class Loader
                 }
     }
 
-
+        //Кошка
         Cat cat4 = new Cat();
 
         System.out.println(); //Просто отступ
@@ -41,23 +42,40 @@ public class Loader
                     System.out.println("Cat4 is overMeow'ed: " + cat4.getStatus());
                 }
             }
-        Cat cat5 = new Cat();
+
+        //Кошка
+        Cat catC = new Cat(); //Тут жрём и сикаем. Что еще можно от жизни просить?
         System.out.println(); //Просто отступ
 
-        cat5.getWeight();
+        System.out.println(catC.getWeight());
+        catC.feed(141.0);
+        System.out.println(catC.getWeight());
+        System.out.println(catC.getFoodAmount());
 
-        Cat cat6 = new Cat();
+        catC.getWeight();
+
+        //Кошка
+        Cat catV = new Cat();
         System.out.println(); //Просто отступ
 
-        cat6.getWeight();
+        System.out.println("Едим и сбрасываем вес:");
 
+        System.out.println(catV.getWeight());
+        catV.feed(150.0);
+        System.out.println(catV.getWeight());
+        catV.pee();
+        catV.pee();
+        catV.pee();
+        System.out.println(catV.getWeight());
+        System.out.println("Сожрано Вискаса: " + catV.getFoodAmount());
 
+        catV.getWeight();
+
+        //Кошка
         Cat cat7 = new Cat();
         System.out.println(); //Просто отступ
 
         cat7.getWeight();
-
-
 
 
     }
