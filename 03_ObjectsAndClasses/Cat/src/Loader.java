@@ -1,5 +1,7 @@
 
 public class Loader {
+
+
     public static void main(String[] args) {
         System.out.println(); //Просто отступ
       //Кошка
@@ -17,18 +19,11 @@ public class Loader {
             cat2.feed(3.0);
             System.out.println("Cat2 weight after feed: " + cat2.getWeight());
 
-        System.out.println(); //Просто отступ
 
+        Cat getkitten = getkitten();
 
-        //Кошка //Перекармливаем кошку
-        Cat cat3 = new Cat();
-        System.out.println("Перекармливаем до взрыва: ");
-        while (cat3.getWeight() <= cat3.getMaxWeight()) {
+        System.out.println("Вес котёнка: " + getkitten.getWeight());
 
-                cat3.feed(1000.0);
-                if (cat3.getWeight() >= cat3.getMaxWeight()) {
-                    System.out.println("Cat3 is overfeed: " + cat3.getStatus());
-                }
     }
 
         //Кошка
@@ -53,7 +48,6 @@ public class Loader {
         System.out.println(catC.getWeight());
         System.out.println(catC.getFoodAmount());
 
-        catC.getWeight();
 
         //Кошка
         Cat catV = new Cat();
@@ -103,7 +97,3 @@ public class Loader {
         cat9.drink(10000.0);
         cat9.getStatus();
         cat9.pee();
-
-        System.out.println(cat9.getStatus());
-    }
-}
