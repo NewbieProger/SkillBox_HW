@@ -10,6 +10,8 @@ public class Loader {
         System.out.println("Cat1 weight: " + cat1.getWeight());
         cat1.feed(3.0);
         System.out.println("Cat1 weight after feed: " + cat1.getWeight());
+        cat1.setColour(CatColour.BLACK);
+        System.out.println(cat1.getColour());
 
         System.out.println(); //Просто отступ
 
@@ -115,16 +117,28 @@ public class Loader {
         Cat catWeight = new Cat(4500.0);
         System.out.println(catWeight.getWeight());
 
-
+        //Котёнок, где создаём объект через метод
         Cat getkitten = getkitten();
 
         System.out.println("Вес котёнка: " + getkitten.getWeight());
 
+        //ЕНАМовский котёнок
+        Cat ps1 = new Cat(CatColour.RED);
+        System.out.println(ps1.getColour());
+
+
+        Cat getkittenWithColour = getkittenWithColour();
+        System.out.println("Котенок с краской из ENUM: " + getkittenWithColour.getColour());
     }
 
     private static Cat getkitten() { //А тут вопросы: В метод можно обращаться к другим классам? где-то чего то я не понимаию. Можно Конкретики?
         Cat kitty = new Cat(1100.0);
         return kitty;
+    }
+
+    private static Cat getkittenWithColour() { //Метод на конструктор  создания кота с цветом
+        Cat kotenok = new Cat(CatColour.ORANGE);
+        return kotenok;
     }
 
 

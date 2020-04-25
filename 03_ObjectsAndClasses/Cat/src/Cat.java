@@ -11,6 +11,7 @@ public class Cat
     public static final int COUNT_EYES = 2;
     public static final double MIN_WEIGHT = 2000.0;
     public static final double MAX_WEIGHT = 8000.0;
+    private CatColour colour; //ЕНАМ переменная
 
     public Cat()
     {
@@ -20,11 +21,17 @@ public class Cat
         maxWeight = 9000.0;
         foodAmount = 0;
         count = count + 1;
+        CatColour colour; //ЕНАМ переменная
     }
 
     public Cat (double weight) {
         this();
         this.weight = weight;
+    }
+
+    public Cat (CatColour colour) { //Конструктор на основе ЕНАМ данных
+        this();
+        this.colour = colour;
     }
 
     public void meow()
@@ -100,4 +107,13 @@ public class Cat
             return "Playing";
         }
     }
+
+    public void setColour(CatColour colour) { //Геттер и Сеттер ЕНАМ данных
+        this.colour = colour;
+    }
+
+    public CatColour getColour() {
+        return colour;
+    }
+
 }
