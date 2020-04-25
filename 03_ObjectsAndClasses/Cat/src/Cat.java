@@ -22,8 +22,9 @@ public class Cat
         count = count + 1;
     }
 
-    private static int getCount() {
-        return count;
+    public Cat (double weight) {
+        this();
+        this.weight = weight;
     }
 
     public void meow()

@@ -4,7 +4,7 @@ public class Loader {
 
     public static void main(String[] args) {
         System.out.println(); //Просто отступ
-      //Кошка
+        //Кошка
 
         Cat cat1 = new Cat();
         System.out.println("Cat1 weight: " + cat1.getWeight());
@@ -13,18 +13,25 @@ public class Loader {
 
         System.out.println(); //Просто отступ
 
-      //Кошка
+        //Кошка
         Cat cat2 = new Cat();
-            System.out.println("Cat2 weight: " + cat2.getWeight());
-            cat2.feed(3.0);
-            System.out.println("Cat2 weight after feed: " + cat2.getWeight());
+        System.out.println("Cat2 weight: " + cat2.getWeight());
+        cat2.feed(3.0);
+        System.out.println("Cat2 weight after feed: " + cat2.getWeight());
+
+        System.out.println(); //Просто отступ
 
 
-        Cat getkitten = getkitten();
+        //Кошка //Перекармливаем кошку
+        Cat cat3 = new Cat();
+        System.out.println("Перекармливаем до взрыва: ");
+        while (cat3.getWeight() <= cat3.getMaxWeight()) {
 
-        System.out.println("Вес котёнка: " + getkitten.getWeight());
-
-    }
+            cat3.feed(1000.0);
+            if (cat3.getWeight() >= cat3.getMaxWeight()) {
+                System.out.println("Cat3 is overfeed: " + cat3.getStatus());
+            }
+        }
 
         //Кошка
         Cat cat4 = new Cat();
@@ -32,12 +39,12 @@ public class Loader {
         System.out.println(); //Просто отступ
         System.out.println("Замяукиваем досмерти: ");
 
-            while (cat4.getWeight() >= cat4.getMinWeight()) {
-                cat4.meow();
-                if (cat4.getWeight() <= cat4.getMinWeight()) {
-                    System.out.println("Cat4 is overMeow'ed: " + cat4.getStatus());
-                }
+        while (cat4.getWeight() >= cat4.getMinWeight()) {
+            cat4.meow();
+            if (cat4.getWeight() <= cat4.getMinWeight()) {
+                System.out.println("Cat4 is overMeow'ed: " + cat4.getStatus());
             }
+        }
 
         //Кошка //Тут жрём и сикаем. Что еще можно от жизни просить?
         Cat catC = new Cat();
@@ -48,6 +55,7 @@ public class Loader {
         System.out.println(catC.getWeight());
         System.out.println(catC.getFoodAmount());
 
+        catC.getWeight();
 
         //Кошка
         Cat catV = new Cat();
@@ -97,3 +105,27 @@ public class Loader {
         cat9.drink(10000.0);
         cat9.getStatus();
         cat9.pee();
+
+        System.out.println(cat9.getStatus());
+
+        //Показываем количество живых кошек
+        System.out.println("Количество выживших: " + Cat.count);
+
+        //Новый конструктор
+        Cat catWeight = new Cat(4500.0);
+        System.out.println(catWeight.getWeight());
+
+
+        Cat getkitten = getkitten();
+
+        System.out.println("Вес котёнка: " + getkitten.getWeight());
+
+    }
+
+    private static Cat getkitten() { //А тут вопросы: В метод можно обращаться к другим классам? где-то чего то я не понимаию. Можно Конкретики?
+        Cat kitty = new Cat(1100.0);
+        return kitty;
+    }
+
+
+}
