@@ -12,6 +12,7 @@ public class Cat
     public static final double MIN_WEIGHT = 2000.0;
     public static final double MAX_WEIGHT = 8000.0;
     private CatColour colour; //ЕНАМ переменная
+    private int toysItHas;
 
     public Cat()
     {
@@ -20,18 +21,29 @@ public class Cat
         minWeight = 1000.0;
         maxWeight = 9000.0;
         foodAmount = 0;
-        count = count + 1;
+        count++;
         CatColour colour; //ЕНАМ переменная
+        toysItHas = 0;
     }
 
+    //Конструктор с вводом данных
     public Cat (double weight) {
         this();
         this.weight = weight;
     }
 
-    public Cat (CatColour colour) { //Конструктор на основе ЕНАМ данных
+    //Конструктор на основе ЕНАМ данных
+    public Cat (CatColour colour) {
         this();
         this.colour = colour;
+    }
+
+    //Копировальня
+    public Cat copy(Cat original) {
+        Cat copyCat = new Cat();
+        setWeight(original.getWeight());
+        setToysItHas(original.getToysItHas());
+        return copyCat;
     }
 
     public void meow()
@@ -82,7 +94,7 @@ public class Cat
     public void pee() {
 
         if (weight > minWeight && weight < maxWeight) {
-            weight = weight - 1;
+            weight--;
             System.out.println("http://joxi.ru/l2ZpD56cEnXeXr");
         } else {
             System.out.println("Кошка ушла внебытие. Лоток больше убирать не надо");
@@ -93,11 +105,11 @@ public class Cat
     public String getStatus()
     {
         if(weight < minWeight) {
-            count = count - 1;
+            count--;
             return "Dead";
         }
         else if (weight > maxWeight) {
-            count = count - 1;
+            count--;
             return "Exploded";
         }
         else if (weight > originWeight) {
@@ -115,5 +127,18 @@ public class Cat
     public CatColour getColour() {
         return colour;
     }
+
+    public void setWeight(double weight) {
+        this.weight = weight;
+    }
+
+    public int getToysItHas() {
+        return toysItHas;
+    }
+
+    public void setToysItHas(int toysItHas) {
+        this.toysItHas = toysItHas;
+    }
+
 
 }

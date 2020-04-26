@@ -73,6 +73,7 @@ public class Loader {
         catV.pee();
         System.out.println(catV.getWeight());
         System.out.println("Сожрано Вискаса: " + catV.getFoodAmount());
+        catV.setToysItHas(54);
 
         catV.getWeight();
 
@@ -98,7 +99,8 @@ public class Loader {
         cat8.getStatus();
         cat8.drink(1.0);
         System.out.println(cat8.getWeight());
-
+        cat8.setToysItHas(4);
+        System.out.println(cat8.getToysItHas());
 
         //Писаемся до смерти
         Cat cat9 = new Cat();
@@ -129,17 +131,41 @@ public class Loader {
 
         Cat getkittenWithColour = getkittenWithColour();
         System.out.println("Котенок с краской из ENUM: " + getkittenWithColour.getColour());
+        System.out.println(); //Просто отступ
+
+
+        //Клонируем кота
+
+
+//
+//        Cat cat500 = new Cat();
+//        System.out.println("Cat 500 ves:" + cat500.getWeight());
+//        cat500.copy(cat8);
+//        System.out.println("Cat 500 ves:" + cat500.getWeight());
+
+        Cat q501 = new Cat();
+        System.out.println("catV toys and weight before copy: " + catV.getToysItHas() + " " + catV.getWeight());
+        System.out.println("q501 toys and weight before copy: " + q501.getToysItHas() + " " + q501.getWeight());
+        q501.copy(catV);//Вызываем метод копирования и передаем старую кошку, в котором копирует вес и игрушки
+        System.out.println("catV toys and weight after copy: " + catV.getToysItHas() + " " + catV.getWeight());
+        System.out.println("q501 toys and weight after copy: " + q501.getToysItHas() + " " + q501.getWeight());
+
+
+        q501.feed(324.0); //Кормим скопированную кошку
+
+        System.out.println("catV weight after feed: " + catV.getWeight() + "q501 weight after feed: " + q501.getWeight()); //Проверяем, что мы покорпили скопированную кошку и вес изменился только у неё, а не у оригинала
     }
 
-    private static Cat getkitten() { //А тут вопросы: В метод можно обращаться к другим классам? где-то чего то я не понимаию. Можно Конкретики?
+    private static Cat getkitten() { //А тут вопросы: В методt можно обращаться к другим классам (Cat)? где-то чего то я не понимаию. Можно Конкретики?
         Cat kitty = new Cat(1100.0);
         return kitty;
     }
 
-    private static Cat getkittenWithColour() { //Метод на конструктор  создания кота с цветом
+    private static Cat getkittenWithColour() { //Метод на конструктор создания кота с цветом
         Cat kotenok = new Cat(CatColour.ORANGE);
         return kotenok;
     }
+
 
 
 }
