@@ -1,6 +1,5 @@
 
-public class Cat
-{
+public class Cat {
     private double originWeight;
     private double weight;
 
@@ -13,9 +12,9 @@ public class Cat
     public static final double MAX_WEIGHT = 8000.0;
     private CatColour colour; //ЕНАМ переменная
     private int toysItHas;
+    private String status;
 
-    public Cat()
-    {
+    public Cat() {
         weight = 1500.0 + 3000.0 * Math.random();
         originWeight = weight;
         minWeight = 1000.0;
@@ -27,13 +26,14 @@ public class Cat
     }
 
     //Конструктор с вводом данных
-    public Cat (double weight) {
+    public Cat(double weight) {
         this();
         this.weight = weight;
+        originWeight = weight;
     }
 
     //Конструктор на основе ЕНАМ данных
-    public Cat (CatColour colour) {
+    public Cat(CatColour colour) {
         this();
         this.colour = colour;
     }
@@ -43,46 +43,59 @@ public class Cat
         Cat copyCat = new Cat();
         setWeight(original.getWeight());
         setToysItHas(original.getToysItHas());
+        setColour(getColour());
+        feed(getFoodAmount());
         return copyCat;
     }
 
-    public void meow()
-    {
-        weight = weight - 1000; // Побольше поставил, а то мусора в логах много
-        System.out.println("Meow");
+    public void meow() {
+        if (isAlive()) {
+            weight = weight - 1000;
+            System.out.println("Meow");
+
+            if (!isAlive()) {
+                count--;
+            }
+
+        } else {
+            System.out.println("Кошка респавнится...");
+        }
     }
 
-    public double feed(Double amount)
-    {
-        if (weight > minWeight && weight < maxWeight) {
+    public void feed(Double amount) {
+        if (isAlive()) {
             weight = weight + amount;
             foodAmount = amount;
-        } else {
-            System.out.println("Кошка ушла внебытие. Нельзя кормить");
-        }
-        return foodAmount;
-    }
 
-    public void drink(Double amount)
-    {
-        if (weight > minWeight && weight < maxWeight) {
-            weight = weight + amount;
+            if (!isAlive()) {
+                count--;
+            }
         } else {
             System.out.println("Кошка ушла внебытие. Нельзя поить");
         }
     }
 
-    public Double getWeight()
-    {
+    public void drink(Double amount) {
+        if (isAlive()) {
+            weight = weight + amount;
+            if (!isAlive()) {
+                count--;
+            }
+        } else {
+            System.out.println("Кошка ушла внебытие. Нельзя поить");
+        }
+    }
+
+    public Double getWeight() {
         return weight;
     }
 
-    public double getMaxWeight () { //Возвращаем макс. значение массы, чтобы в цикле сравнить
+    public double getMaxWeight() { //Возвращаем макс. значение массы, чтобы в цикле сравнить
 
         return maxWeight;
     }
 
-    public double getMinWeight () { //Возвращаем макс. значение массы, чтобы в цикле сравнить
+    public double getMinWeight() { //Возвращаем макс. значение массы, чтобы в цикле сравнить
 
         return minWeight;
     }
@@ -93,7 +106,7 @@ public class Cat
 
     public void pee() {
 
-        if (weight > minWeight && weight < maxWeight) {
+        if (isAlive()) {
             weight--;
             System.out.println("http://joxi.ru/l2ZpD56cEnXeXr");
         } else {
@@ -102,20 +115,23 @@ public class Cat
 
     }
 
-    public String getStatus()
-    {
-        if(weight < minWeight) {
-            count--;
+    public boolean isAlive() {
+        if (weight > minWeight && weight < maxWeight) {
+            return true;
+        } else {
+            System.out.println("Кошка ушла внебытие");
+            return false;
+        }
+    }
+
+    public String getStatus() {
+        if (weight < minWeight) {
             return "Dead";
-        }
-        else if (weight > maxWeight) {
-            count--;
+        } else if (weight > maxWeight) {
             return "Exploded";
-        }
-        else if (weight > originWeight) {
+        } else if (weight > originWeight) {
             return "Sleeping";
-        }
-        else {
+        } else {
             return "Playing";
         }
     }
