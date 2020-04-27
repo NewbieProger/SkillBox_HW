@@ -71,7 +71,7 @@ public class Cat {
                 count--;
             }
         } else {
-            System.out.println("Кошка ушла внебытие. Нельзя поить");
+            System.out.println("Кошка ушла внебытие. Нельзя кормить");
         }
     }
 
