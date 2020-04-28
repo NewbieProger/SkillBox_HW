@@ -143,17 +143,18 @@ public class Loader {
 //        cat500.copy(cat8);
 //        System.out.println("Cat 500 ves:" + cat500.getWeight());
 
-        Cat q501 = new Cat();
+        Cat copyCat = catV.copy(); //Вызываем метод копирования и передаем старую кошку, в котором копирует вес и игрушки
         System.out.println("catV toys and weight before copy: " + catV.getToysItHas() + " " + catV.getWeight());
-        System.out.println("q501 toys and weight before copy: " + q501.getToysItHas() + " " + q501.getWeight());
-        q501.copy(catV);//Вызываем метод копирования и передаем старую кошку, в котором копирует вес и игрушки
+        System.out.println("copyCat toys and weight before copy: " + copyCat.getToysItHas() + " " + copyCat.getWeight());
+        copyCat.feed(530.0);
+        copyCat.setToysItHas(12);
         System.out.println("catV toys and weight after copy: " + catV.getToysItHas() + " " + catV.getWeight());
-        System.out.println("q501 toys and weight after copy: " + q501.getToysItHas() + " " + q501.getWeight());
+        System.out.println("copyCat toys and weight after copy: " + copyCat.getToysItHas() + " " + copyCat.getWeight());
 
 
-        q501.feed(324.0); //Кормим скопированную кошку
+        copyCat.feed(324.0); //Кормим скопированную кошку
 
-        System.out.println("catV weight after feed: " + catV.getWeight() + "q501 weight after feed: " + q501.getWeight()); //Проверяем, что мы покорпили скопированную кошку и вес изменился только у неё, а не у оригинала
+        System.out.println("catV weight after feed: " + catV.getWeight() + "\n" + " copyCat weight after feed: " + copyCat.getWeight()); //Проверяем, что мы покорпили скопированную кошку и вес изменился только у неё, а не у оригинала
     }
 
     private static Cat getkitten() { //А тут вопросы: В методt можно обращаться к другим классам (Cat)? где-то чего то я не понимаию. Можно Конкретики?

@@ -21,7 +21,6 @@ public class Cat {
         maxWeight = 9000.0;
         foodAmount = 0;
         count++;
-        CatColour colour; //ЕНАМ переменная
         toysItHas = 0;
     }
 
@@ -39,12 +38,12 @@ public class Cat {
     }
 
     //Копировальня
-    public Cat copy(Cat original) {
+    public Cat copy() {
         Cat copyCat = new Cat();
-        setWeight(original.getWeight());
-        setToysItHas(original.getToysItHas());
-        setColour(getColour());
-        feed(getFoodAmount());
+        copyCat.weight=this.weight;
+        copyCat.originWeight=this.originWeight;
+        copyCat.toysItHas=this.toysItHas;
+        copyCat.foodAmount=this.foodAmount;
         return copyCat;
     }
 
