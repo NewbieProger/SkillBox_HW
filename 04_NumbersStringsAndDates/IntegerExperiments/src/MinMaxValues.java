@@ -1,6 +1,3 @@
-import java.math.BigDecimal;
-import java.math.RoundingMode;
-
 public class MinMaxValues {
     public static void main(String[] args) {
         String minValueByte = Byte.toString(Byte.MIN_VALUE);
@@ -15,25 +12,25 @@ public class MinMaxValues {
         String minValueLong = Long.toString(Long.MIN_VALUE);
         String maxValueLong = Long.toString(Long.MAX_VALUE);
 
-        BigDecimal minValueFloat = new BigDecimal(Float.toString(Float.MIN_VALUE)).setScale(3, RoundingMode.UP);
-        BigDecimal maxValueFloat = new BigDecimal(Float.toString(Float.MAX_VALUE)).setScale(3, RoundingMode.UP);
+        String minValueFloat = Float.toString(Float.MIN_VALUE);
+        String maxValueFloat = Float.toString(Float.MAX_VALUE);
 
-        BigDecimal minValueDouble = new BigDecimal(Double.toString(Double.MIN_VALUE)).setScale(3, RoundingMode.UP);
-        BigDecimal maxValueDouble = new BigDecimal(Double.toString(Double.MAX_VALUE)).setScale(3, RoundingMode.UP);
+        String minValueDouble = Double.toString(Double.MIN_VALUE);
+        String maxValueDouble = Double.toString(Double.MAX_VALUE);
 
 
         System.out.println(
-                minValueByte + '\n' +
-                maxValueByte + '\n' +
-                        minValueInt + '\n' +
-                        maxValueInt + '\n' +
-                        minValueShort + '\n' +
-                        maxValueShort + '\n' +
-                        minValueLong + '\n' +
-                        maxValueLong + '\n' +
-                        minValueFloat + '\n' +
-                        maxValueFloat + '\n' +
-                        minValueDouble + '\n' +
+                minValueByte + ' ' + '\n' +
+                maxValueByte + ' ' + '\n' +
+                        minValueInt + ' ' + '\n' +
+                        maxValueInt + ' ' + '\n' +
+                        minValueShort + ' ' + '\n' +
+                        maxValueShort + ' ' + '\n' +
+                        minValueLong + ' ' + '\n' +
+                        maxValueLong + ' ' + '\n' +
+                        minValueFloat + ' ' + '\n' +
+                        maxValueFloat + ' ' + '\n' +
+                        minValueDouble + ' ' + '\n' +
                         maxValueDouble
         );
     }
