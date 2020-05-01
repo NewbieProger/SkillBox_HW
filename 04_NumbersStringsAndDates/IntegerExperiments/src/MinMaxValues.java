@@ -1,3 +1,6 @@
+import java.math.BigDecimal;
+import java.math.RoundingMode;
+
 public class MinMaxValues {
     public static void main(String[] args) {
         String minValueByte = Byte.toString(Byte.MIN_VALUE);
@@ -12,10 +15,10 @@ public class MinMaxValues {
         String minValueLong = Long.toString(Long.MIN_VALUE);
         String maxValueLong = Long.toString(Long.MAX_VALUE);
 
-        String minValueFloat = Float.toString(Float.MIN_VALUE);
+        String minValueFloat = Float.toString(-Float.MIN_VALUE);
         String maxValueFloat = Float.toString(Float.MAX_VALUE);
 
-        String minValueDouble = Double.toString(Double.MIN_VALUE);
+        String minValueDouble = Double.toString(-Double.MIN_VALUE);
         String maxValueDouble = Double.toString(Double.MAX_VALUE);
 
 
@@ -31,7 +34,7 @@ public class MinMaxValues {
                         minValueFloat + ' ' + '\n' +
                         maxValueFloat + ' ' + '\n' +
                         minValueDouble + ' ' + '\n' +
-                        maxValueDouble
+                        maxValueDouble + '\n'
         );
     }
 }
