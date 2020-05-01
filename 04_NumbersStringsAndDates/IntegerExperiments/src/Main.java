@@ -15,7 +15,7 @@ public class Main {
         String str = number.toString(); //Тут создаем объект "Строка", обращаемся к передаваемому number (а он, в свою очередь, является объектом, т.к. является Integer'om, и превращаем в строку
         int sum = 0; //Просто переменную сделали, чтобы было , что заполнить и к чему обратиться
         for (int x = 0; x < str.length(); x++) { //Инициализация переменной x, чтобы было от чего считать и она же является индексом строки; Индекс меньше длины строки; Увеличиваем индекс строки
-            int a = Integer.parseInt(String.valueOf(str.charAt(x)));
+            sum += Character.getNumericValue(str.charAt(x)); //Приобразовал из этого "Integer.parseInt(String.valueOf(str.charAt(x)));"
 //            int a = Integer.parseInt(Integer.toString(str.charAt(x)));
             /*(изнутри во вне расписываю):
             * у строки ищем символ по индексу
@@ -27,7 +27,6 @@ public class Main {
             * Потом, через оператор "+=" складываем сумму цифр
             * */
 
-            sum += a;
 
         }
 
