@@ -45,7 +45,9 @@ public class GeometryCalculator {
                 geometryLoader.setTriangleBasisFirst(Double.parseDouble(inputsThreeBasics[0]));
                 geometryLoader.setTriangleBasisSecond(Double.parseDouble(inputsThreeBasics[1]));
                 geometryLoader.setTriangleBasisThird(Double.parseDouble(inputsThreeBasics[2]));
-                GeometryCalculator.triangleThreeBasicsArea(geometryLoader.getTriangleBasisFirst(), geometryLoader.getTriangleBasisSecond(), geometryLoader.getTriangleBasisThird());
+                GeometryCalculator.triangleThreeBasicsArea(geometryLoader.getTriangleBasisFirst(),
+                        geometryLoader.getTriangleBasisSecond(),
+                        geometryLoader.getTriangleBasisThird());
         }
 
     }
@@ -53,15 +55,18 @@ public class GeometryCalculator {
     /*Формулы*/
 
     public static void circleArea(double radius) {
-        System.out.println("Площадь круга равна: " + Math.round(Math.PI * Math.pow(radius, 2)));
+        System.out.println("Площадь круга равна: " +
+                Math.round(Math.PI * Math.pow(radius, 2)));
     }
 
     public static void triangleArea(double trHeight, double trBasis) {
-        System.out.println("Площадь треугольника равна: " + (trHeight * trBasis) / 2);
+        System.out.println("Площадь треугольника равна: " +
+                (trHeight * trBasis) / 2);
     }
 
     public static void volumeArea(double volumeRadius) {
-        System.out.println("Объем сферы равен: " + Math.round(4 * Math.PI * Math.pow(volumeRadius, 3)) / 3);
+        System.out.println("Объем сферы равен: " +
+                Math.round(4 * Math.PI * Math.pow(volumeRadius, 3)) / 3);
     }
 
     public static void triangleThreeBasicsArea(double getTriangleBasisFirst, double triangleBasisSecond, double triangleBasisThird) {
