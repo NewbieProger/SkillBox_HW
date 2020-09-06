@@ -66,7 +66,11 @@ public class GeometryCalculator {
 
     public static void triangleThreeBasicsArea(double getTriangleBasisFirst, double triangleBasisSecond, double triangleBasisThird) {
         double halfPerimeter = (getTriangleBasisFirst + triangleBasisSecond + triangleBasisThird) / 2;
-        double trArea = Math.sqrt(halfPerimeter * (halfPerimeter - getTriangleBasisFirst) * (halfPerimeter - triangleBasisSecond) * (halfPerimeter - triangleBasisThird));
+        double trArea = Math.sqrt(halfPerimeter *
+                (halfPerimeter - getTriangleBasisFirst) *
+                (halfPerimeter - triangleBasisSecond) *
+                (halfPerimeter - triangleBasisThird));
+
         if (trArea != 0) {
             System.out.println("Площадь треугольника по трём сторонам равна: "
                     + trArea);

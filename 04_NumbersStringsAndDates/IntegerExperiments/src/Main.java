@@ -8,7 +8,7 @@ public class Main {
 //        Main main = new Main();
 //        System.out.println(main.sumDigits(321));
 
-        System.out.println(sumDigits(container.count)); //Если бы я сделал метод статичным
+        System.out.println(sumDigits(container.count)); //Если я сделал метод статичным в другом классе одного пекеджа
     }
 
     public static Integer sumDigits(Integer number) { //1. Сделал статичным, потому что идея так сказала. Видимо, чтобы я смог его вызвать без создания объекта?
