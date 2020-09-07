@@ -3,8 +3,6 @@ import java.util.Scanner;
 
 public class GeometryCalculator {
 
-    public double radius;
-
     public static void main(String[] args) {
 
         GeometryLoader geometryLoader = new GeometryLoader();
