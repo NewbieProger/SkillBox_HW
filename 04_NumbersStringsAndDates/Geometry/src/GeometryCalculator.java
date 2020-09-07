@@ -38,6 +38,7 @@ public class GeometryCalculator {
                 Scanner volumeRadius = new Scanner(System.in);
                 geometryLoader.setVolumeRadius(Double.parseDouble(volumeRadius.next()));
                 GeometryCalculator.volumeArea(geometryLoader.getVolumeRadius());
+                break;
             case 4:
                 System.out.println("Введите три стороны через запятую: \t");
                 Scanner threeBasics = new Scanner(System.in);
@@ -48,6 +49,7 @@ public class GeometryCalculator {
                 GeometryCalculator.triangleThreeBasicsArea(geometryLoader.getTriangleBasisFirst(),
                         geometryLoader.getTriangleBasisSecond(),
                         geometryLoader.getTriangleBasisThird());
+                break;
         }
 
     }
