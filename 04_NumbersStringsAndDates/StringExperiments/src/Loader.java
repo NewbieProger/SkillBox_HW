@@ -21,7 +21,7 @@ public class Loader {
         int cashVasya = Integer.parseInt((text.substring(spaceIndexes.get(1), spaceIndexes.get(2))).trim());
         int cashPetr = Integer.parseInt(text.substring(spaceIndexes.get(5), spaceIndexes.get(6)).trim());
         int cashMasha = Integer.parseInt(text.substring(spaceIndexes.get(10), spaceIndexes.get(11)).trim());
-        int sumFriends = cashVasya+cashPetr+cashMasha;
+        int sumFriends = cashVasya + cashPetr + cashMasha;
 
         System.out.println("Сумма зарплат друзей: " + sumFriends);
     }
