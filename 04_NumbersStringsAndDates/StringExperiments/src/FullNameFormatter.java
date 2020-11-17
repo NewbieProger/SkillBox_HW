@@ -8,7 +8,7 @@ public class FullNameFormatter {
         String space = " ";
         List<Integer> spaceIndexes = new ArrayList<>();
 
-        if (FullNameFormatter.isNumber(fio)) {
+        if (!FullNameFormatter.isNumber(fio)) {
             for (int i = 0; i < fio.length(); i++) {
                 int indexOfSpace = fio.indexOf(space, i);
 
