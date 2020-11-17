@@ -10,7 +10,7 @@ public class SplitText {
         String text = qwe.getText("InputText", " ");
 
 
-        String replacedText = text.replaceAll("[.,/#!$%^&*;:{}=_`~()\\-\\d]", "")
+        String replacedText = text.replaceAll("[.,#!$%&;:{}=_`~()\\d]", "")
                 .replaceAll("\\s{2}", " ")
                 .replace("-", " ")
                 .replaceAll("\\s", "\r\n");
