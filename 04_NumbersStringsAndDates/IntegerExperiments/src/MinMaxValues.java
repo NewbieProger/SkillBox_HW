@@ -15,8 +15,8 @@ public class MinMaxValues {
         String minValueLong = Long.toString(Long.MIN_VALUE);
         String maxValueLong = Long.toString(Long.MAX_VALUE);
 
-        String minValueFloat = Float.toString(-Float.MIN_VALUE);
-        String maxValueFloat = Float.toString(Float.MAX_VALUE);
+        String minValueFloat = Float.toString(Float.MIN_VALUE);
+        String maxValueFloat = Float.toString(-Float.MAX_VALUE);
 
         String minValueDouble = Double.toString(-Double.MIN_VALUE);
         String maxValueDouble = Double.toString(Double.MAX_VALUE);
