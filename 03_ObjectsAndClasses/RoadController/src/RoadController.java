@@ -1,5 +1,4 @@
 import core.*;
-import core.Camera;
 
 import java.util.Scanner;
 
@@ -47,7 +46,7 @@ public class RoadController
     private static int calculatePrice(Car car)
     {
         int carHeight = car.height;
-        int price = 0;
+        int price;
         if (carHeight > controllerMaxHeight)
         {
             blockWay("высота вашего ТС превышает высоту пропускного пункта!");
