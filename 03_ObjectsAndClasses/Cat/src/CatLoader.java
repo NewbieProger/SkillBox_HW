@@ -1,5 +1,4 @@
-
-public class Loader
+public class CatLoader
 {
     public static void main(String[] args)
     {
