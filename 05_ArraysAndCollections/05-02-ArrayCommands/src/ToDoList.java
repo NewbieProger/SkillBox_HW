@@ -1,23 +1,42 @@
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class Commands {
+public class ToDoList {
 
-    private final String regexCommands = "LIST|ADD\\s\\d+\\s.+|ADD\\s.+|EDIT\\s\\d+\\s\\.+|DELETE\\s\\d+|DELETE\\s\\w+";
+//    private final String regexCommands = "LIST|ADD\\s\\d+\\s.+|ADD\\s.+|EDIT\\s\\d+\\s\\.+|DELETE\\s\\d+|DELETE\\s\\w+";
+    private final String regexCommands = "(LIST|ADD|EDIT|DELETE) (\\D+|\\d+|(\\d+) (\\D+))";
     private final Pattern patternCommands = Pattern.compile(regexCommands);
-    List<String> listCases = new ArrayList<>();
+    private List<String> listCases = new ArrayList<>();
 
-    public Boolean validateInsertedCommand(String command) {
+    public String getMatcherGroup(String command, int groupIndex) {
         Matcher matcherCommands = patternCommands.matcher(command);
-        return matcherCommands.matches();
+        /*Объясните, почему без следующей строки у меня группы не хочет находить? Я бошку сломал уже*/
+        matcherCommands.matches();
+        return matcherCommands.group(groupIndex);
+    }
+
+    public Boolean isCommandValidated(String command) {
+        Matcher matcher = patternCommands.matcher(command);
+        if (matcher.matches()) {
+            return true;
+        }
+
+        return false;
+    }
+
+    public int groupCounts(String command) {
+        Matcher matcherCommands = patternCommands.matcher(command);
+        return matcherCommands.groupCount();
     }
 
     public void showCases() {
+        System.out.println("Дело : № - Название");
         if (!listCases.isEmpty()) {
             for (String eachCase : listCases) {
-                System.out.println(new StringBuilder("Дело (№ - Название): ")
+                System.out.println(new StringBuilder("Дело : ")
                         .append(listCases.indexOf(eachCase))
                         .append(" - ")
                         .append(eachCase));
@@ -90,13 +109,5 @@ public class Commands {
                 System.out.println("Дело с указанным названием отсутствует");
             }
         }
-    }
-
-    public void deleteAllCases() {
-            while (listCases.size() != 0) {
-                listCases.clear();
-            }
-
-            System.out.println("Список дел очищен.");
     }
 }
