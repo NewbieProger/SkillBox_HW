@@ -3,52 +3,70 @@ import java.util.Scanner;
 public class MapPhoneBook {
     public static void main(String[] args) {
 
-        Scanner scannerCode = new Scanner(System.in);
-        MapPhoneBookCommands mapPhoneBookCommands = new MapPhoneBookCommands();
+        Scanner scannerStart = new Scanner(System.in);
+        BookCommands bookCommands = new BookCommands();
+        System.out.println(new StringBuilder("Телефонная книга."));
 
-        System.out.println(new StringBuilder()
-                .append("Телефонная книга. Укажите команду.\n")
-                .append("NAME - Указать имя контакта\n")
-                .append("PHONE - Указть номер телефона\n")
-                .append("LIST - Отобразить список контактов")
-                .append("EXIT - Выход"));
-//                .append("ADD %Номер позиции% %Название дела% - Добавить дело на определённую позицию\n")
-//                .append("EDIT %Номер позиции% %Новое название дела% - Изменить название дела на определённой позиции\n")
-//                .append("DELETE %Номер позиции% - Удалить дело по номеру позиции"));
-//
+        for (; ; ) {
+            System.out.println(new StringBuilder()
+                    .append("\nУкажите имя, номер контакта, 'LIST' для отображения телефонной книги или 'EXIT' для выхода из программы."));
 
-        for ( ; ; ) {
-
-            String inputCode = scannerCode.nextLine().toUpperCase();
+            String inputStart = scannerStart.nextLine().toUpperCase();
             String inputNumber = "";
+            String inputName = "";
 
-            switch (inputCode) {
+            if (inputStart.equals("EXIT")) {
+                break;
+            } else if (!bookCommands.castNumber(inputStart).equals("ERROR")) {
+                inputStart = bookCommands.castNumber(inputStart);
+            }
+
+            switch (bookCommands.checkInputData(inputStart)) {
                 case "NAME":
-                    Scanner scannerName = new Scanner(System.in);
-                    String inputName = scannerName.nextLine();
+                    inputName = inputStart;
 
-                    if (!mapPhoneBookCommands.doesBookHasName(inputName)) {
+                    if (!bookCommands.doesBookHasName(inputName)) {
                         System.out.println("Введите номер телефона для пользователя: " + inputName);
                         Scanner scannerNumber = new Scanner(System.in);
                         inputNumber = scannerNumber.nextLine();
-                        inputNumber = mapPhoneBookCommands.castNumber(inputNumber);
+                        inputNumber = bookCommands.castNumber(inputNumber);
 
-                        mapPhoneBookCommands.setNameAndNumber(inputName, Integer.valueOf(inputNumber));
+                        if (!inputNumber.equals("ERROR")) {
+                            bookCommands.setNameAndNumber(inputName, inputNumber);
+
+                            bookCommands.contactCreatedSuccessfully(inputName, inputNumber);
+                        } else {
+                            System.out.println("Неверный формат номера. Повторите попытку.");
+                        }
+
                     } else {
-                        System.out.println(new StringBuilder("Контакт с таким именем уже содержится в телефонной книге: ")
-                        .append(mapPhoneBookCommands.showInfoByName(inputName))
-                        .append(" - ")
-                        .append(mapPhoneBookCommands.showInfoByNumber(Integer.valueOf(inputNumber))));
+                        bookCommands.contactContainsInBook(inputName, "именем");
                     }
-                case "PHONE":
+                    break;
+                case "NUMBER":
+                    inputNumber = inputStart;
+
+                    if (!bookCommands.doesBookHasNumber(inputNumber)) {
+                        System.out.println("Введите имя пользователя для номера телефона: " + inputNumber);
+                        Scanner scannerName = new Scanner(System.in);
+                        inputName = scannerName.nextLine().trim();
+
+                        bookCommands.setNameAndNumber(inputName, inputNumber);
+
+                        bookCommands.contactCreatedSuccessfully(inputName, inputNumber);
+
+                    } else {
+                        inputName = bookCommands.findName(inputNumber);
+
+                        bookCommands.contactContainsInBook(inputName, "номером");
+                    }
+                    break;
                 case "LIST":
-            }
-
-
-
-
-            if (scannerCode.equals("EXIT")) {
-                break;
+                    bookCommands.showList();
+                    break;
+                case "WRONG":
+                    System.out.println("Введённые данные не распознаны");
+                    break;
             }
         }
     }
