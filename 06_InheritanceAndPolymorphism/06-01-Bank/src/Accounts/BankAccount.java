@@ -20,7 +20,6 @@ public class BankAccount {
     }
 
     public Double getBalance() {
-        System.out.println("Balance is: " + balance);
         return balance;
     }
 
