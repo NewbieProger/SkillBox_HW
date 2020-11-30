@@ -1,7 +1,5 @@
 package Accounts;
 
-import org.jetbrains.annotations.NotNull;
-
 import java.time.LocalDate;
 
 public class DepositAccount extends BankAccount {

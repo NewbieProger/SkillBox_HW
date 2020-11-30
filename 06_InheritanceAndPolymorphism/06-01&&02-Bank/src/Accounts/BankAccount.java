@@ -24,7 +24,7 @@ public class BankAccount {
     }
 
     public boolean sendThrowBills(@NotNull BankAccount receiver, double amount) {
-
+        
         if (withdraw(amount)) {
             receiver.deposit(amount);
             return true;
