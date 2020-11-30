@@ -1,3 +1,5 @@
+import Enums.InputType;
+
 import java.util.Scanner;
 
 public class MapPhoneBook {
@@ -12,24 +14,28 @@ public class MapPhoneBook {
                     .append("\nУкажите имя, номер контакта, 'LIST' для отображения телефонной книги или 'EXIT' для выхода из программы."));
 
             String inputStart = scannerStart.nextLine().toUpperCase();
-            String inputNumber = "";
-            String inputName = "";
+            String inputNumber;
+            String inputName;
 
             if (inputStart.equals("EXIT")) {
                 break;
-            } else if (!bookCommands.castNumber(inputStart).equals("ERROR")) {
-                inputStart = bookCommands.castNumber(inputStart);
             }
 
-            switch (bookCommands.checkInputData(inputStart)) {
-                case "NAME":
+            if (bookCommands.formatNumber(inputStart).isPresent()) {
+                inputStart = bookCommands.formatNumber(inputStart).get();
+            }
+
+            InputType inputType = bookCommands.checkInputData(inputStart);
+
+            switch (inputType) {
+                case NAME:
                     inputName = inputStart;
 
                     if (!bookCommands.doesBookHasName(inputName)) {
                         System.out.println("Введите номер телефона для пользователя: " + inputName);
                         Scanner scannerNumber = new Scanner(System.in);
                         inputNumber = scannerNumber.nextLine();
-                        inputNumber = bookCommands.castNumber(inputNumber);
+                        inputNumber = bookCommands.formatNumber(inputNumber).orElse("Не удалось отформатировать введённый номер.");
 
                         if (!inputNumber.equals("ERROR")) {
                             bookCommands.setNameAndNumber(inputName, inputNumber);
@@ -43,7 +49,7 @@ public class MapPhoneBook {
                         bookCommands.contactContainsInBook(inputName, "именем");
                     }
                     break;
-                case "NUMBER":
+                case NUMBER:
                     inputNumber = inputStart;
 
                     if (!bookCommands.doesBookHasNumber(inputNumber)) {
@@ -56,15 +62,15 @@ public class MapPhoneBook {
                         bookCommands.contactCreatedSuccessfully(inputName, inputNumber);
 
                     } else {
-                        inputName = bookCommands.findName(inputNumber);
+                        inputName = bookCommands.findName(inputNumber).orElse("Имя не найдено.");
 
                         bookCommands.contactContainsInBook(inputName, "номером");
                     }
                     break;
-                case "LIST":
+                case LIST:
                     bookCommands.showList();
                     break;
-                case "WRONG":
+                case WRONG:
                     System.out.println("Введённые данные не распознаны");
                     break;
             }
