@@ -3,7 +3,7 @@ package Accounts;
 import org.jetbrains.annotations.NotNull;
 
 public class BankAccount {
-    Double balance = 0.0;
+    protected Double balance = 0.0;
 
     public boolean withdraw(Double amount) {
         if (balance >= amount) {
