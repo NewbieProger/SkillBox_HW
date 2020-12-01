@@ -4,7 +4,6 @@ public class IndividualEntrepreneurs extends BankClient {
 
     private double withdrawPercentLess = 0.01;
     private double withdrawPercentMore = 0.05;
-    private double depositPercent;
 
     @Override
     public void deposit(double amount) {
