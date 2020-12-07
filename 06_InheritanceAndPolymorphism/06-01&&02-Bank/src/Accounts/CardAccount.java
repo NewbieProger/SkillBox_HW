@@ -6,12 +6,6 @@ public class CardAccount extends BankAccount {
 
     @Override
     public boolean withdraw(Double amount) {
-        if (balance >= amount) {
-            balance -= (amount + amount * percent);
-            return true;
-        } else {
-            System.out.println("Balance less then withdraw amount. Your balance is: " + getBalance());
-            return false;
-        }
+        return super.withdraw(amount + amount * percent);
     }
 }
