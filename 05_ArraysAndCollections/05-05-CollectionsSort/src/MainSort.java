@@ -3,9 +3,15 @@ import java.util.*;
 public class MainSort {
     public static void main(String[] args) {
 
-        String randomizedRegion = "";
+//        String randomizedRegion = "";
+//        String randomizedNumber = "";
 
-        String randomizedNumber = "";
+        String fLetter;
+        String number;
+        String sLetter;
+        String tLetter;
+        String region;
+        String coolNumber;
 
         String[] numbers = {"000", "111", "222", "333", "444", "555", "666", "777", "888", "999"};
 
@@ -13,36 +19,59 @@ public class MainSort {
 
         HashSet<String> listHash = new HashSet<>();
 
-        while (listHash.size() < 2000000) {
-            int region = (int) ((Math.random() * 198) + 1); /*Чтобы быстрее генерил расширить второй множитель с 198 на 9998*/
-            int randomIndex = (int) (Math.random() * 9);
-            int randomIndexLetter1 = (int) (Math.random() * 9);
-            int randomIndexLetter2 = (int) (Math.random() * 9);
-            int randomIndexLetter3 = (int) (Math.random() * 9);
-
-            if (region >= 10 && region < 100) {
-                randomizedRegion = "0" + region;
-            } else if (region < 10) {
-                randomizedRegion = "00" + region;
-            } else {
-                randomizedRegion = String.valueOf(region);
-            }
-
-            randomizedNumber = letters[randomIndexLetter1] + numbers[randomIndex] + letters[randomIndexLetter2] + letters[randomIndexLetter3] + randomizedRegion;
-            listHash.add(randomizedNumber);
-
-            if (listHash.size() % 100000 == 0) {
-                System.out.println("Размер хешЛиста - " + listHash.size());
-            }
-            /*Отладочный кусок*/
+        /*Первичное решение через рандомайзер. Попросили сделать перебором*/
+//        while (listHash.size() < 2000000) {
+//            int region = (int) ((Math.random() * 198) + 1); /*Чтобы быстрее генерил расширить второй множитель с 198 на 9998*/
+//            int randomIndex = (int) (Math.random() * 9);
+//            int randomIndexLetter1 = (int) (Math.random() * 9);
+//            int randomIndexLetter2 = (int) (Math.random() * 9);
+//            int randomIndexLetter3 = (int) (Math.random() * 9);
 //
-//            if (listHash.size() == 8982) {
-//                System.out.println("Имеется номер в хешЛисте? - " + listHash.contains(randomizedNumber));
+//            if (region >= 10 && region < 100) {
+//                randomizedRegion = "0" + region;
+//            } else if (region < 10) {
+//                randomizedRegion = "00" + region;
+//            } else {
+//                randomizedRegion = String.valueOf(region);
 //            }
 //
-//            if (listHash.size() % 100 == 0) {
+//            randomizedNumber = letters[randomIndexLetter1] + numbers[randomIndex] + letters[randomIndexLetter2] + letters[randomIndexLetter3] + randomizedRegion;
+//            listHash.add(randomizedNumber);
+//
+//            if (listHash.size() % 100000 == 0) {
 //                System.out.println("Размер хешЛиста - " + listHash.size());
 //            }
+//            /*Отладочный кусок*/
+////
+////            if (listHash.size() == 8982) {
+////                System.out.println("Имеется номер в хешЛисте? - " + listHash.contains(randomizedNumber));
+////            }
+////
+////            if (listHash.size() % 100 == 0) {
+////                System.out.println("Размер хешЛиста - " + listHash.size());
+////            }
+//        }
+
+        for (int firstLetter = 0; firstLetter < letters.length; firstLetter++) {
+            fLetter = letters[firstLetter];
+
+            for (int indexNumbers = 0; indexNumbers < numbers.length; indexNumbers++) {
+                number = numbers[indexNumbers];
+
+                for (int secondLetter = 0; secondLetter < letters.length; secondLetter++) {
+                    sLetter = letters[secondLetter];
+
+                    for (int thirdLetter = 0; thirdLetter < letters.length; thirdLetter++) {
+                        tLetter = letters[thirdLetter];
+
+                        for (int regionNumber = 0; regionNumber <= 198; regionNumber++) {
+                            region = String.valueOf(regionNumber);
+                            coolNumber = fLetter + number + sLetter + tLetter + region;
+                            listHash.add(coolNumber);
+                        }
+                    }
+                }
+            }
         }
 
         System.out.println("Размер хешЛиста - " + listHash.size());
