@@ -6,13 +6,6 @@ public class MainSort {
 //        String randomizedRegion = "";
 //        String randomizedNumber = "";
 
-        String fLetter;
-        String number;
-        String sLetter;
-        String tLetter;
-        String region;
-        String coolNumber;
-
         String[] numbers = {"000", "111", "222", "333", "444", "555", "666", "777", "888", "999"};
 
         String[] letters = {"С", "М", "Т", "В", "А", "Р", "О", "Н", "Е", "У"};
@@ -53,20 +46,20 @@ public class MainSort {
 //        }
 
         for (int firstLetter = 0; firstLetter < letters.length; firstLetter++) {
-            fLetter = letters[firstLetter];
+            String fLetter = letters[firstLetter];
 
             for (int indexNumbers = 0; indexNumbers < numbers.length; indexNumbers++) {
-                number = numbers[indexNumbers];
+                String number = numbers[indexNumbers];
 
                 for (int secondLetter = 0; secondLetter < letters.length; secondLetter++) {
-                    sLetter = letters[secondLetter];
+                    String sLetter = letters[secondLetter];
 
                     for (int thirdLetter = 0; thirdLetter < letters.length; thirdLetter++) {
-                        tLetter = letters[thirdLetter];
+                        String tLetter = letters[thirdLetter];
 
                         for (int regionNumber = 0; regionNumber <= 198; regionNumber++) {
-                            region = String.valueOf(regionNumber);
-                            coolNumber = fLetter + number + sLetter + tLetter + region;
+                            String region = String.valueOf(regionNumber);
+                            String coolNumber = fLetter + number + sLetter + tLetter + region;
                             listHash.add(coolNumber);
                         }
                     }
