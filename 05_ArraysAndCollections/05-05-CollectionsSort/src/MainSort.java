@@ -89,9 +89,10 @@ public class MainSort {
         System.out.println("Введите номерной знак:");
         String inputNumber = scanner.nextLine();
         /*Перебор*/
+        boolean listFound = false;
         long startArray = System.nanoTime();
 
-        boolean listFound = list.contains(inputNumber);
+        listFound = list.contains(inputNumber);
 
         long endArray = System.nanoTime() - startArray;
         System.out.println("Поиск перебором: " + "Номер найден? - " + listFound + " Поиск занял: " + endArray);
@@ -108,15 +109,17 @@ public class MainSort {
         System.out.println("Бинарный поиск: " + "Номер найден? - " + binSearchFound + " Поиск занял: " + endArrayBin);
 
         /*HashSet*/
+        boolean hashSetFound = false;
         long startHashSet = System.nanoTime();
-        boolean hashSetFound = listHash.contains(inputNumber);
+        hashSetFound = listHash.contains(inputNumber);
         long endHashSet = System.nanoTime() - startHashSet;
 
         System.out.println("HashSet поиск: " + "Номер найден? - " + hashSetFound + " Поиск занял: " + endHashSet);
 
         /*TreeSet*/
+        boolean treeSetFound = false;
         long startTreeSet = System.nanoTime();
-        boolean treeSetFound = listTree.contains(inputNumber);
+        treeSetFound = listTree.contains(inputNumber);
         long endTreeSet = System.nanoTime() - startTreeSet;
 
         System.out.println("TreeSet поиск: " + "Номер найден? - " + treeSetFound + " Поиск занял: " + endTreeSet);
