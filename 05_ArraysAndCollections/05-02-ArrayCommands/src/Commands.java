@@ -1,42 +1,23 @@
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Map;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class ToDoList {
+public class Commands {
 
-//    private final String regexCommands = "LIST|ADD\\s\\d+\\s.+|ADD\\s.+|EDIT\\s\\d+\\s\\.+|DELETE\\s\\d+|DELETE\\s\\w+";
-    private final String regexCommands = "(LIST|ADD|EDIT|DELETE) (\\D+|\\d+|(\\d+) (\\D+))";
+    private final String regexCommands = "LIST|ADD\\s\\d+\\s.+|ADD\\s.+|EDIT\\s\\d+\\s\\.+|DELETE\\s\\d+|DELETE\\s\\w+";
     private final Pattern patternCommands = Pattern.compile(regexCommands);
-    private List<String> listCases = new ArrayList<>();
+    List<String> listCases = new ArrayList<>();
 
-    public String getMatcherGroup(String command, int groupIndex) {
+    public Boolean validateInsertedCommand(String command) {
         Matcher matcherCommands = patternCommands.matcher(command);
-        /*Объясните, почему без следующей строки у меня группы не хочет находить? Я бошку сломал уже*/
-        matcherCommands.matches();
-        return matcherCommands.group(groupIndex);
-    }
-
-    public Boolean isCommandValidated(String command) {
-        Matcher matcher = patternCommands.matcher(command);
-        if (matcher.matches()) {
-            return true;
-        }
-
-        return false;
-    }
-
-    public int groupCounts(String command) {
-        Matcher matcherCommands = patternCommands.matcher(command);
-        return matcherCommands.groupCount();
+        return matcherCommands.matches();
     }
 
     public void showCases() {
-        System.out.println("Дело : № - Название");
         if (!listCases.isEmpty()) {
             for (String eachCase : listCases) {
-                System.out.println(new StringBuilder("Дело : ")
+                System.out.println(new StringBuilder("Дело (№ - Название): ")
                         .append(listCases.indexOf(eachCase))
                         .append(" - ")
                         .append(eachCase));
@@ -109,5 +90,13 @@ public class ToDoList {
                 System.out.println("Дело с указанным названием отсутствует");
             }
         }
+    }
+
+    public void deleteAllCases() {
+            while (listCases.size() != 0) {
+                listCases.clear();
+            }
+
+            System.out.println("Список дел очищен.");
     }
 }

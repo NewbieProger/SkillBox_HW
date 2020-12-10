@@ -4,28 +4,8 @@ public class ReverseMassiveMain {
 
         String[] splittedText = text.split(",?\\s+");
 
-        splittedText = reverseMassive(splittedText);
-
-        showMassive(splittedText);
-
-    }
-
-    public static String[] reverseMassive(String[] text) {
-        int lastIndex = text.length - 1;
-        String[] reversedMassive = new String[text.length];
-        int j = reversedMassive.length - 1;
-
-        for (int i = 0; i <= lastIndex; i++) {
-            reversedMassive[i] = text[j];
-            j--;
-        }
-
-        return reversedMassive;
-    }
-
-    public static void showMassive(String[] text) {
-        for (String eachElement : text) {
-            System.out.println(eachElement);
+        for (int i = splittedText.length - 1; i >= 0; i--) {
+            System.out.println(splittedText[i]);
         }
     }
 }
