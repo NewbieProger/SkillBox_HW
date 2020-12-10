@@ -15,7 +15,7 @@ public class ArrayCommandScanner {
         ToDoList toDoList = new ToDoList();
 
 
-        for (; ; ) {
+        for ( ; ; ) {
             String scannerCommand = scanner.nextLine();
 
             String editedCommand = scannerCommand.toUpperCase().trim();
@@ -25,37 +25,34 @@ public class ArrayCommandScanner {
                 break;
             }
 
-            if (Boolean.FALSE.equals(toDoList.isCommandValidated(editedCommand))) {
+            if (!Boolean.TRUE.equals(toDoList.isCommandValidated(editedCommand))) {
                 System.out.println("Неверная команда. Валидация не прошла.");
                 continue;
             }
 
+            Integer groupCount = toDoList.groupCounts(editedCommand);
 
-            String regexCommand = toDoList.getMatcherGroup(editedCommand, 1).trim();
-            int regexIndex = Integer.parseInt(toDoList.getMatcherGroup(editedCommand, 2).trim());
-            String regexNameOfItem = String.valueOf(toDoList.getMatcherGroup(editedCommand, 3)).trim();
-
-            switch (regexCommand) {
+            switch (toDoList.getMatcherGroup(editedCommand, 1)) {
                 case "LIST":
                     toDoList.showCases();
                     break;
                 case "ADD":
-                    if (regexIndex != -1) {
-                        toDoList.addCaseIndexAndName(regexIndex, regexNameOfItem);
+                    if (!groupCount.equals(4)) {
+                        toDoList.addCaseIndexAndName(Integer.parseInt(toDoList.getMatcherGroup(editedCommand, 3)), toDoList.getMatcherGroup(editedCommand, 4));
                     } else {
-                        toDoList.addCaseName(regexNameOfItem);
+                        toDoList.addCaseName(toDoList.getMatcherGroup(editedCommand,2));
                     }
                     break;
 
                 case "EDIT":
-                    toDoList.editCase(regexIndex, regexNameOfItem);
+                    toDoList.editCase(Integer.parseInt(toDoList.getMatcherGroup(editedCommand, 3)), toDoList.getMatcherGroup(editedCommand, 4));
                     break;
 
                 case "DELETE":
-                    if (regexIndex != -1) {
-                        toDoList.deleteCaseByIndex(regexIndex);
+                    if (!groupCount.equals(5)) {
+                        toDoList.deleteCaseByIndex(Integer.parseInt(toDoList.getMatcherGroup(editedCommand, 3)));
                     } else {
-                        toDoList.deleteCaseByName(regexNameOfItem);
+                        toDoList.deleteCaseByName(toDoList.getMatcherGroup(editedCommand,4));
                     }
                     break;
             }

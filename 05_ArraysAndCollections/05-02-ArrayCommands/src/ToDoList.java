@@ -1,26 +1,35 @@
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Optional;
+import java.util.Map;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class ToDoList {
 
-    private final String regexCommands = "(LIST|ADD|EDIT|DELETE)(\\s\\d+)?(\\s.*)?";
+//    private final String regexCommands = "LIST|ADD\\s\\d+\\s.+|ADD\\s.+|EDIT\\s\\d+\\s\\.+|DELETE\\s\\d+|DELETE\\s\\w+";
+    private final String regexCommands = "(LIST|ADD|EDIT|DELETE) (\\D+|\\d+|(\\d+) (\\D+))";
     private final Pattern patternCommands = Pattern.compile(regexCommands);
     private List<String> listCases = new ArrayList<>();
 
     public String getMatcherGroup(String command, int groupIndex) {
         Matcher matcherCommands = patternCommands.matcher(command);
-
+        /*Объясните, почему без следующей строки у меня группы не хочет находить? Я бошку сломал уже*/
         matcherCommands.matches();
-
-        return Optional.ofNullable(matcherCommands.group(groupIndex)).orElse("-1");
+        return matcherCommands.group(groupIndex);
     }
 
-    public boolean isCommandValidated(String command) {
+    public Boolean isCommandValidated(String command) {
         Matcher matcher = patternCommands.matcher(command);
-        return matcher.matches();
+        if (matcher.matches()) {
+            return true;
+        }
+
+        return false;
+    }
+
+    public int groupCounts(String command) {
+        Matcher matcherCommands = patternCommands.matcher(command);
+        return matcherCommands.groupCount();
     }
 
     public void showCases() {

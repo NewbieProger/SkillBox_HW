@@ -1,12 +1,6 @@
-import Enums.InputType;
-
 import java.util.Map;
-import java.util.Optional;
 import java.util.Set;
 import java.util.TreeMap;
-
-import static Enums.InputType.*;
-
 
 public class BookCommands {
 
@@ -21,22 +15,24 @@ public class BookCommands {
 
     public void showList() {
         for (Map.Entry<String, String> entries : entrySet) {
+            String value = entries.getValue();
+            String key = entries.getKey();
             System.out.println(new StringBuilder("Контакт: ")
-                    .append(entries.getKey())
+                    .append(key)
                     .append(" - ")
-                    .append(entries.getValue()));
+                    .append(value));
         }
     }
 
     public void contactCreatedSuccessfully(String inputName, String inputNumber) {
         System.out.println(new StringBuilder("Создан новый контакт: ")
-                .append(findName(inputNumber).get())
+                .append(findName(inputNumber))
                 .append(" - ")
                 .append(findNumber(inputName)));
     }
 
     public void contactContainsInBook(String inputName, String whoContains) {
-        System.out.println(new StringBuilder("Контакт с таким ")
+        System.out.println(new StringBuilder("Контакт с таким")
                 .append(whoContains)
                 .append("уже содержится в телефонной книге: ")
                 .append(inputName)
@@ -44,22 +40,30 @@ public class BookCommands {
                 .append(findNumber(inputName)));
     }
 
-    public boolean doesBookHasName(String keyName) {
-        return phoneBook.containsKey(keyName);
+    public Boolean doesBookHasName(String keyName) {
+        if (phoneBook.containsKey(keyName)) {
+            return true;
+        }
+
+        return false;
     }
 
-    public boolean doesBookHasNumber(String phoneNumber) {
-        return phoneBook.containsValue(phoneNumber);
+    public Boolean doesBookHasNumber(String phoneNumber) {
+        if (phoneBook.containsValue(phoneNumber)) {
+            return true;
+        }
+        return false;
     }
 
-    public Optional<String> findName(String number) {
+    public String findName(String number) {
         String name = "";
         for (Map.Entry<String, String> entries : entrySet) {
             if (entries.getValue().equals(number)) {
                 name = entries.getKey();
+                return name;
             }
         }
-        return Optional.ofNullable(name);
+        return "Имя не найдено";
     }
 
     public String findNumber(String name) {
@@ -67,18 +71,19 @@ public class BookCommands {
     }
 
 
-    public InputType checkInputData(String inputScanner) {
+    public String checkInputData(String inputScanner) {
         if (inputScanner.matches("LIST")) {
-            return LIST;
+            return "LIST";
         } else if (inputScanner.matches("^7.{10}$")) {
-            return NUMBER;
+            return "NUMBER";
         } else if (inputScanner.matches("^\\D+$")) {
-            return NAME;
+            return "NAME";
         }
-        return WRONG;
+        return "WRONG";
+
     }
 
-    public Optional<String> formatNumber(String inputNumber) {
+    public String castNumber(String inputNumber) {
         String replacedNumber = inputNumber.trim().replaceAll("[\\D]", "")
                 .replaceAll("^8", "7");
 
@@ -86,13 +91,14 @@ public class BookCommands {
         boolean missedSevenAtStart = replacedNumber.matches("^9.{9}$");
 
         if (countAndStartDigits) {
-            return Optional.of(replacedNumber);
+            return replacedNumber;
         } else if (missedSevenAtStart) {
             replacedNumber = "7" + replacedNumber;
-            return Optional.of(replacedNumber);
+            return replacedNumber;
+        } else {
+            return "ERROR";
         }
 
-        return Optional.empty();
     }
 
 }
