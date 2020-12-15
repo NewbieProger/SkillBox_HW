@@ -1,8 +1,8 @@
 package company_structure;
 
-public class Operator extends Company {
+public class Operator extends AbstractEmployee {
 
-    public Operator(int fixedSalary) {
-        empTotalSalary = fixedSalary;
+    public Operator(double fixedSalary) {
+        super(fixedSalary);
     }
 }

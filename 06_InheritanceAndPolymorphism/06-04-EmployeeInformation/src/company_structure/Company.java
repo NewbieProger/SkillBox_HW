@@ -1,74 +1,74 @@
 package company_structure;
 
-import java.util.ArrayList;
-import java.util.Comparator;
-import java.util.List;
+import java.util.*;
 
-public class Company implements Employee {
+public class Company {
+    protected double income = 0;
 
-    protected double empTotalSalary;
-    protected double employeeProfit;
-    protected double totalProfit;
-    protected List<Company> companyList = new ArrayList<>();
+    protected List<Employee> employeeList = new ArrayList<>();
 
-    @Override
-    public double getMonthSalary() {
-        return empTotalSalary;
+    public List<Employee> getEmployeeList() {
+        return employeeList;
     }
 
-    public List<Company> getCompanyList() {
-        return companyList;
+
+    public void hire(Employee employee) {
+        employee.setCompany(this);
+        employee.setSalary();
+        employeeList.add(employee);
+        System.out.println("Один сотрудник нанят: " +
+                employee.getClass().getSimpleName() +
+                " с зарплатой: $" + employee.getMonthSalary());
     }
 
-    public void hire(Company company) {
-        companyList.add(company);
-        System.out.println("Один сотрудник нанят");
-    }
-
-    public void hireAll(List<Company> listEmployees) {
-        companyList.addAll(listEmployees);
+    public void hireAll(List<Employee> listEmployees) {
+        employeeList.addAll(listEmployees);
         System.out.println("Пачка сотрудников нанята.");
     }
 
     public void fire() {
-        if (!companyList.isEmpty()) {
-            companyList.remove(companyList.size() - 1);
+        if (!employeeList.isEmpty()) {
+            employeeList.remove(employeeList.size() - 1);
             System.out.println("Сотрудник уволен.");
         }
     }
 
-    public void getIncome() {
-        System.out.println("Общий доход равен: " + totalProfit);
+    public double getIncome() {
+        return income;
     }
 
-    public void getTopSalaryStaff(int count) {
-//        Collections.sort(companyList);
-        companyList.sort((Comparator.comparingDouble(Company::getMonthSalary)));
-
-        if (count > 0 && count <= companyList.size()) {
-            for (int index = 0; index < count; index++) {
-                System.out.println(companyList.get(index).getMonthSalary());
-            }
-        } else {
-            System.out.println("Задаваемый размер не входит в диапазон количества сотрудников.");
-        }
-
-//        return companyList;
+    public void setIncome(double income) {
+        this.income = income;
     }
 
+    public List<Employee> getTopSalaryStaff(int count) {
+        Collections.sort(employeeList);
+        List<Employee> sorted = new ArrayList<>();
 
-    public void getLowestSalaryStaff(int count) {
-//        Collections.sort(companyList);
-            companyList.sort((o1, o2) -> (int) (o2.getMonthSalary() - o1.getMonthSalary()));
-//        return companyList;
-
-        if (count > 0 && count <= companyList.size()) {
+        if (count > 0 && count <= employeeList.size()) {
             for (int index = 0; index < count; index++) {
-                System.out.println(companyList.get(index).getMonthSalary());
+                sorted.add(employeeList.get(index));
             }
-        } else {
-            System.out.println("Задаваемый размер не входит в диапазон количества сотрудников.");
+            return sorted;
         }
+        return employeeList;
+    }
 
+    public List<Employee> getLowestSalaryStaff(int count) {
+        Collections.reverse(employeeList);
+        List<Employee> sorted = new ArrayList<>();
+
+        if (count > 0 && count <= employeeList.size()) {
+            for (int index = 0; index < count; index++) {
+                sorted.add(employeeList.get(index));
+            }
+            return sorted;
+        }
+        return employeeList;
+
+    }
+
+    public void setTotalIncome(double income) {
+        this.income = income;
     }
 }
