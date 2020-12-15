@@ -10,13 +10,4 @@ public class NaturalPerson extends BankClient {
                 getAccountBalance());
     }
 
-    @Override
-    protected double getWithdrawCommission(double withDrawAmount) {
-        return withDrawAmount * this.withdrawCommission;
-    }
-
-    @Override
-    protected double getReplenishCommission(double replenishAmount) {
-        return replenishAmount * this.replenishCommission;
-    }
 }

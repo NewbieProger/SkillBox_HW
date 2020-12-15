@@ -2,30 +2,34 @@ package accounts;
 
 public abstract class BankClient {
 
-    protected double accountBalance = 0;
-    protected double withdrawCommission = 0;
-    protected double replenishCommission = 0;
+    protected double accountBalance;
+    protected double withdrawCommission;
+    protected double replenishCommission;
 
     public void replenish(double amount) {
-        this.accountBalance += amount + getReplenishCommission(amount);
+        accountBalance += amount + getReplenishCommission(amount);
     }
 
     public void withdraw(double amount) {
         if (amount >= accountBalance) {
-            this.accountBalance -= amount + getWithdrawCommission(amount);
+            accountBalance -= amount + getWithdrawCommission(amount);
         } else {
-            System.out.println("AccountBalance less then withdraw amount. Your accountBalance is: " + this.getAccountBalance());
+            System.out.println("AccountBalance less then withdraw amount. Your accountBalance is: " + getAccountBalance());
         }
     }
 
     public double getAccountBalance() {
-        return this.accountBalance;
+        return accountBalance;
     }
 
     public abstract void showBillInfo();
 
-    protected abstract double getWithdrawCommission(double withDrawAmount);
+    protected double getWithdrawCommission(double withDrawAmount) {
+        return withDrawAmount * withdrawCommission;
+    }
 
-    protected abstract double getReplenishCommission(double withDrawAmount);
+    protected double getReplenishCommission(double replenishAmount) {
+        return replenishAmount * replenishCommission;
+    }
 
 }
