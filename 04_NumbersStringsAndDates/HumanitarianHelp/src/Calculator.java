@@ -24,7 +24,7 @@ public class Calculator {
                 truckNumber++;
             }
 
-            if (boxNumber % maxBoxes == 0 || boxNumber == 1) {
+            if ((boxNumber - 1) % maxBoxes == 0 || boxNumber == 1) {
                 System.out.println("\tКонтейнер: " + containerNumber);
                 containerNumber++;
             }
