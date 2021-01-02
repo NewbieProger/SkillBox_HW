@@ -11,22 +11,23 @@ public class HRDepartment {
         Company company = new Company();
         System.out.println();
 
-        company.hire(new Manager(654));
+        company.hire(new Manager(654, 1 ));
         System.out.println();
-        company.hire(new Manager(768));
+        company.hire(new Manager(768, 2));
 
 
-        company.hire(new TopManager(123));
-        company.hire(new TopManager(345));
-        company.hire(new TopManager(543));
-        company.hire(new TopManager(654));
-        company.hire(new TopManager(76543));
-        company.hire(new TopManager(6548));
-        company.hire(new Manager(98));
-        company.hire(new TopManager(4213));
-        company.hire(new TopManager(16));
-        company.hire(new Manager(346));
-        company.hire(new TopManager(4574613));
+        company.hire(new TopManager(123, 3));
+        company.hire(new TopManager(345, 4));
+        company.hire(new TopManager(543, 5));
+        company.hire(new TopManager(654, 6));
+        company.hire(new TopManager(76543, 7));
+        company.hire(new TopManager(6548, 8));
+        company.hire(new Manager(98, 9));
+        company.hire(new TopManager(4213, 10));
+        company.hire(new TopManager(16, 11));
+        company.hire(new Manager(346, 12));
+        company.hire(new TopManager(4574613, 13));
+
 
         System.out.println();
 
@@ -46,7 +47,7 @@ public class HRDepartment {
 
         System.out.println();
 
-        company.fire();
+        company.fire(3);
         for (Employee employee : company.getEmployeeList()) {
             System.out.println(employee.getMonthSalary());
         }

@@ -8,6 +8,14 @@ public interface Employee extends Comparable<Employee> {
 
     void setSalary();
 
-    @Override
-    int compareTo(Employee o);
+    default int compareTo(Employee o) {
+        return Double.compare(getMonthSalary(), o.getMonthSalary());
+    }
+
+    int getIdEmployee();
+
+    void setIdEmployee(int idEmployee);
+
+    double getProfitForCompany();
+
 }

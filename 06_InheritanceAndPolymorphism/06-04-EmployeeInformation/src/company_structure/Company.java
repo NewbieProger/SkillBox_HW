@@ -1,6 +1,8 @@
 package company_structure;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 
 public class Company {
     protected double income = 0;
@@ -22,14 +24,20 @@ public class Company {
     }
 
     public void hireAll(List<Employee> listEmployees) {
-        employeeList.addAll(listEmployees);
+        for (Employee employee : listEmployees) {
+            hire(employee);
+        }
         System.out.println("Пачка сотрудников нанята.");
     }
 
-    public void fire() {
+    public void fire(int idEmployee) {
         if (!employeeList.isEmpty()) {
-            employeeList.remove(employeeList.size() - 1);
-            System.out.println("Сотрудник уволен.");
+            for (Employee employee : employeeList) {
+                if (employee.getIdEmployee() == idEmployee) {
+                    employeeList.remove(employeeList.indexOf(employee));
+                }
+            }
+            System.out.println("Сотрудник" + idEmployee + "уволен.");
         }
     }
 
