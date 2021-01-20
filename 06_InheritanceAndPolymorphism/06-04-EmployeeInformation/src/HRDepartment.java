@@ -48,19 +48,27 @@ public class HRDepartment {
         System.out.println();
 
         company.fire(3);
+        for (Employee emp : company.getEmployeeList()) {
+            System.out.println(emp.getEmployeeId());
+        }
+
+        System.out.println();
+
         for (Employee employee : company.getEmployeeList()) {
             System.out.println(employee.getMonthSalary());
         }
 
-        System.out.println();
 
         List<Employee> employees = company.getTopSalaryStaff(6);
         for (Employee employee : employees) {
             System.out.println(employee.getMonthSalary());
         }
 
+        System.out.println("---");
 
-        System.out.println();
+
+
+        System.out.println("---");
 
         List<Employee> employeesReverse = company.getLowestSalaryStaff(6);
         for (Employee employee : employeesReverse) {

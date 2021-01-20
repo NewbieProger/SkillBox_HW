@@ -12,9 +12,9 @@ public interface Employee extends Comparable<Employee> {
         return Double.compare(getMonthSalary(), o.getMonthSalary());
     }
 
-    int getIdEmployee();
+    int getEmployeeId();
 
-    void setIdEmployee(int idEmployee);
+    void setEmployeeId(int employeeId);
 
     double getProfitForCompany();
 

@@ -17,6 +17,7 @@ public class Company {
     public void hire(Employee employee) {
         employee.setCompany(this);
         employee.setSalary();
+        setIncome(getIncome() + employee.getProfitForCompany());
         employeeList.add(employee);
         System.out.println("Один сотрудник нанят: " +
                 employee.getClass().getSimpleName() +
@@ -30,14 +31,12 @@ public class Company {
         System.out.println("Пачка сотрудников нанята.");
     }
 
-    public void fire(int idEmployee) {
+    public void fire(int employeeId) {
         if (!employeeList.isEmpty()) {
-            for (Employee employee : employeeList) {
-                if (employee.getIdEmployee() == idEmployee) {
-                    employeeList.remove(employeeList.indexOf(employee));
-                }
-            }
-            System.out.println("Сотрудник" + idEmployee + "уволен.");
+
+            employeeList.removeIf(i -> i.getEmployeeId() == employeeId);
+
+            System.out.println("Сотрудник " + employeeId + " уволен.");
         }
     }
 
@@ -53,13 +52,10 @@ public class Company {
         Collections.sort(employeeList);
         List<Employee> sorted = new ArrayList<>();
 
-        if (count > 0 && count <= employeeList.size()) {
-            for (int index = 0; index < count; index++) {
-                sorted.add(employeeList.get(index));
-            }
-            return sorted;
-        }
-        return employeeList;
+        if (sorted.size() > 0 && sorted.size() >= count) {
+            return sorted.subList(0, count);
+        } else return employeeList;
+
     }
 
     public List<Employee> getLowestSalaryStaff(int count) {
@@ -74,9 +70,5 @@ public class Company {
         }
         return employeeList;
 
-    }
-
-    public void setTotalIncome(double income) {
-        this.income = income;
     }
 }

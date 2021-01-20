@@ -4,12 +4,12 @@ public abstract class AbstractEmployee implements Employee {
     protected double empTotalSalary;
     protected double employeeIncome;
     protected double fixedSalary;
-    protected int idEmployee;
+    protected int employeeId;
     protected Company company;
 
-    public AbstractEmployee(double fixedSalary, int idEmployee) {
+    public AbstractEmployee(double fixedSalary, int employeeId) {
         this.fixedSalary = fixedSalary;
-        this.idEmployee = idEmployee;
+        this.employeeId = employeeId;
     }
 
     @Override
@@ -28,13 +28,13 @@ public abstract class AbstractEmployee implements Employee {
     }
 
     @Override
-    public int getIdEmployee() {
-        return idEmployee;
+    public int getEmployeeId() {
+        return employeeId;
     }
 
     @Override
-    public void setIdEmployee(int idEmployee) {
-        this.idEmployee = idEmployee;
+    public void setEmployeeId(int employeeId) {
+        this.employeeId = employeeId;
     }
 
     @Override

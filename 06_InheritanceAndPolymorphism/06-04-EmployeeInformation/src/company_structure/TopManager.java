@@ -2,8 +2,8 @@ package company_structure;
 
 public class TopManager extends AbstractEmployee {
 
-    public TopManager(double fixedSalary, int idEmployee) {
-        super(fixedSalary, idEmployee);
+    public TopManager(double fixedSalary, int employeeId) {
+        super(fixedSalary, employeeId);
     }
 
     @Override
