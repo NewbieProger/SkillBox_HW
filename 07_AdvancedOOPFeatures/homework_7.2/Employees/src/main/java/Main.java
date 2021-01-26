@@ -28,8 +28,6 @@ public class Main {
 
         LocalDate inputDate = LocalDate.of(year, 1, 1);
 
-        LocalDate dateNow = LocalDate.now();
-
         Employee maxEmployeeSalary = staff.stream()
                 .filter(e -> convertDate(e.getWorkStart()).isAfter(inputDate))
                 .max(Comparator.comparing(Employee::getSalary))
