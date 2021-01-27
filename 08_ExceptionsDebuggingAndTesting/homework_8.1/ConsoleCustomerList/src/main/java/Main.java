@@ -18,6 +18,10 @@ public class Main {
             String[] tokens = command.split("\\s+", 2);
 
             try {
+                if (tokens.length != 2) {
+                    throw new ArrayIndexOutOfBoundsException("Неверная команда");
+                }
+
                 if (tokens[0].equals("add")) {
                     executor.addCustomer(tokens[1]);
                 } else if (tokens[0].equals("list")) {
