@@ -1,3 +1,6 @@
+import Exceptions.EmailFormatException;
+import Exceptions.PhoneNumberException;
+
 import java.util.HashMap;
 import java.util.Map;
 
@@ -8,7 +11,7 @@ public class CustomerStorage {
         storage = new HashMap<>();
     }
 
-    public void addCustomer(String data) {
+    public void addCustomer(String data) throws EmailFormatException {
         final int INDEX_NAME = 0;
         final int INDEX_SURNAME = 1;
         final int INDEX_EMAIL = 2;
@@ -22,11 +25,11 @@ public class CustomerStorage {
         String email = components[2];
 
         if (!email.matches("^.+@.+\\.ru$")) {
-            throw new IllegalArgumentException("Неверный формат e-mail");
+            throw new EmailFormatException("Неверный формат e-mail");
         }
         String phone = components[3];
         if (!phone.matches("^\\+7.{10}$")) {
-            throw new IllegalArgumentException("Неверный формат номера");
+            throw new PhoneNumberException("Неверный формат номера");
         }
 
         String name = components[INDEX_NAME] + " " + components[INDEX_SURNAME];

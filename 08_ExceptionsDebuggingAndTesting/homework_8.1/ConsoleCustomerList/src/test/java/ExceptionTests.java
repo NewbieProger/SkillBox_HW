@@ -1,3 +1,4 @@
+import Exceptions.EmailFormatException;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -54,7 +55,7 @@ public class ExceptionTests {
 
     @Test
     @DisplayName("Тест добавления корректных данных Customer")
-    void insertCorrectData() {
+    void insertCorrectData() throws EmailFormatException {
         final String name = "Василий Петров";
         final String email = "hello@skillbox.ru";
         final String phone = "+79991234567";
