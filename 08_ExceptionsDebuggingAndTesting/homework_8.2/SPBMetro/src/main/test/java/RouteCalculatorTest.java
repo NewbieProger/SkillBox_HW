@@ -1,13 +1,14 @@
 import core.Line;
 import core.Station;
-import junit.framework.TestCase;
+import org.junit.Before;
+import org.junit.Test;
 
 import java.util.ArrayList;
-import java.util.LinkedList;
 import java.util.List;
-import java.util.stream.Collectors;
 
-public class RouteCalculatorTest extends TestCase {
+import static org.junit.Assert.assertEquals;
+
+public class RouteCalculatorTest {
 
     List<Station> stationsList;
     List<Station> connectLine1Line2;
@@ -17,8 +18,7 @@ public class RouteCalculatorTest extends TestCase {
     RouteCalculator routeCalculator;
 
 
-    @Override
-
+    @Before
     public void setUp() throws Exception {
         testScheme = new StationIndex();
         stationsList = new ArrayList<>();
@@ -55,25 +55,6 @@ public class RouteCalculatorTest extends TestCase {
                     s.forEach(station -> testScheme.addStation(station));
                 });
 
-//        System.out.println(testScheme.getStation("Проспект"));
-//        System.out.println(testScheme.getStation("Булина"));
-//        System.out.println(testScheme.getStation("Деревня"));
-//        testScheme.addStation(line1);
-//        testScheme.addStation(line2);
-//        testScheme.addStation(line3);
-
-
-//        testScheme.addStation(new Station("Невская", line1));
-//        testScheme.addStation(new Station("Ленина", line1));
-//        testScheme.addStation(new Station("Идеевская", line1));
-//        testScheme.addStation(new Station("Проспект", line1));
-//        testScheme.addStation(new Station("Горького", line2));
-//        testScheme.addStation(new Station("Булина", line2));
-//        testScheme.addStation(new Station("Хачапупя", line2));
-//        testScheme.addStation(new Station("Комповская", line3));
-//        testScheme.addStation(new Station("Интовская", line3));
-//        testScheme.addStation(new Station("Деревня", line3));
-
         testScheme.addLine(line1);
         testScheme.addLine(line2);
         testScheme.addLine(line3);
@@ -89,6 +70,7 @@ public class RouteCalculatorTest extends TestCase {
         testScheme.addConnection(connectLine2Line3);
     }
 
+    @Test
     public void testGetShortestRoute_NoConnections() {
         ArrayList<Station> expected = new ArrayList<>();
         expected.add(testScheme.getStation("Невская"));
@@ -101,6 +83,7 @@ public class RouteCalculatorTest extends TestCase {
         assertEquals(expected, actual);
     }
 
+    @Test
     public void testGetShortestRoute_OneConnections() {
         ArrayList<Station> expected = new ArrayList<>();
         expected.add(testScheme.getStation("Невская"));
@@ -114,6 +97,7 @@ public class RouteCalculatorTest extends TestCase {
         assertEquals(expected, actual);
     }
 
+    @Test
     public void testGetShortestRoute_TwoConnections() {
         ArrayList<Station> expected = new ArrayList<>();
         expected.add(testScheme.getStation("Невская"));
@@ -130,14 +114,15 @@ public class RouteCalculatorTest extends TestCase {
         assertEquals(expected, actual);
     }
 
+    @Test
     public void testCalculateDuration() {
         double expectedDuration = 19.5;
 
         double actualDuration = RouteCalculator.calculateDuration(
                 routeCalculator.getShortestRoute(testScheme.getStation("Невская"),
                 testScheme.getStation("Комповская")));
-
-        assertEquals(expectedDuration, actualDuration);
+        double epsilon = 0.1;
+        assertEquals(expectedDuration, actualDuration, epsilon);
     }
 
 }
