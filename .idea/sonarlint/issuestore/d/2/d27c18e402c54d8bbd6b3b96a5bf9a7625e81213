@@ -1,0 +1,12 @@
+
+]	java:S125"<This block of commented-out lines of code should be removed.(¤Ğİ†ıÿÿÿÿ8ØÀúİ.
+b
+java:S1854"@Remove this useless assignment to local variable "crossMassive".(££šùúÿÿÿÿ8­˜¯úİ.
+U	java:S106#"9Replace this use of System.out or System.err by a logger.(ï’ì¾8‚­¹úİ.
+[
+java:S1854"9Remove this useless assignment to local variable "space".(Ä™¶Ñøÿÿÿÿ8ë¢şùİ.
+L
+java:S1481"*Remove this unused "space" local variable.(Ä™¶Ñøÿÿÿÿ8ë¢şùİ.
+T	java:S106%"9Replace this use of System.out or System.err by a logger.(°•Ş8‚­¹úİ.
+S
+java:S1481"1Remove this unused "crossMassive" local variable.(££šùúÿÿÿÿ8­˜¯úİ.
