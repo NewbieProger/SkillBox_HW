@@ -2,8 +2,6 @@ import core.Line;
 import core.Station;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.apache.logging.log4j.Marker;
-import org.apache.logging.log4j.MarkerManager;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
@@ -20,9 +18,6 @@ public class Main {
     private static StationIndex stationIndex;
 
     public static Logger logger = LogManager.getRootLogger();
-    private static final Marker INPUT_OK = MarkerManager.getMarker("INPUT_OK");
-    private static final Marker INPUT_ERR = MarkerManager.getMarker("INPUT_ERR");
-    private static final Marker EXCEPTION = MarkerManager.getMarker("EXCEPTION");
 
     public static void main(String[] args) {
         RouteCalculator calculator = getRouteCalculator();
@@ -69,11 +64,11 @@ public class Main {
             String line = scanner.nextLine().trim();
             Station station = stationIndex.getStation(line);
             if (station != null) {
-                logger.info(INPUT_OK, "Введена корректная станция: '{}'", line);
+                logger.info("Введена корректная станция: '{}'", line);
                 return station;
             }
             System.out.println("Станция не найдена :(");
-            logger.warn(INPUT_ERR, "Введена некорректная станция: '{}'", line);
+            logger.warn("Введена некорректная станция: '{}'", line);
         }
     }
 
@@ -92,7 +87,7 @@ public class Main {
             JSONArray connectionsArray = (JSONArray) jsonData.get("connections");
             parseConnections(connectionsArray);
         } catch (Exception ex) {
-            logger.error(EXCEPTION, "Ошибка при создании схемы метро: {}", ex.getMessage());
+            logger.error("Ошибка при создании схемы метро: {}", ex.getMessage());
         }
     }
 
@@ -150,7 +145,7 @@ public class Main {
             List<String> lines = Files.readAllLines(Paths.get(DATA_FILE));
             lines.forEach(line -> builder.append(line));
         } catch (Exception ex) {
-            logger.error(EXCEPTION, "Не найден JSON-файл в пути '{}'", DATA_FILE);
+            logger.error("Не найден JSON-файл в пути '{}'", DATA_FILE);
         }
         return builder.toString();
     }

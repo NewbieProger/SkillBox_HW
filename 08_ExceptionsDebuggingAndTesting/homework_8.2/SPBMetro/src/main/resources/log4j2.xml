@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <configuration status="WARN">
     <appenders>
+
         <File name="incorrectStations"
               fileName="08_ExceptionsDebuggingAndTesting/homework_8.2/SPBMetro/logs/incorrectStations.log"
               append="true"
               immediateFlush="true"
               createOnDemand="false">
             <PatternLayout pattern="%d{dd-MM-yyyy HH:mm:ss} [%t] %-5level %logger{36} - %msg%n"/>
-            <MarkerFilter marker="INPUT_ERR" onMatch="ACCEPT" onMismatch="DENY"/>
+            <ThresholdFilter level="WARN" onMatch="ACCEPT" onMismatch="DENY"/>
         </File>
 
         <File name="correctStations"
@@ -16,15 +17,15 @@
               immediateFlush="true"
               createOnDemand="false">
             <PatternLayout pattern="%d{dd-MM-yyyy HH:mm:ss} [%t] %-5level %logger{36} - %msg%n"/>
-            <MarkerFilter marker="INPUT_OK" onMatch="ACCEPT" onMismatch="DENY"/>
+            <ThresholdFilter level="WARN" onMatch="DENY" onMismatch="ACCEPT"/>
         </File>
+
         <File name="exceptions"
               fileName="08_ExceptionsDebuggingAndTesting/homework_8.2/SPBMetro/logs/exceptions.log">
             <PatternLayout pattern="%d{dd-MM-yyyy HH:mm:ss} [%t] %-5level %logger{36} - %msg%n"/>
-
-            <MarkerFilter marker="EXCEPTION" onMatch="ACCEPT" onMismatch="DENY"/>
-
+            <ThresholdFilter level="ERROR" onMatch="ACCEPT" onMismatch="DENY"/>
         </File>
+
     </appenders>
 
     <loggers>
