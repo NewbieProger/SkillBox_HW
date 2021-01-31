@@ -9,8 +9,8 @@ public class PhoneCleanerClass {
             if (input.equals("0")) {
                 break;
             }
-            String replacedNumber = input.trim().replaceAll("[\\s-()]", "")
-                    .replaceAll("^\\+7|8", "7");
+            String replacedNumber = input.trim().replaceAll("[\\D]", "")
+                    .replaceAll("^8", "7");
 
             boolean countAndStartDigits = replacedNumber.matches("^7.{10}$");
             boolean missedSevenAtStart = replacedNumber.matches("^9.{9}$");
