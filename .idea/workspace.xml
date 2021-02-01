@@ -1,0 +1,527 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:github" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:github_homeworks" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="c6589fb5-f1f9-477d-bf4c-b6184bc750d3" name="Default Changelist" comment="Merge branch 'main' into GH_masterBranchWithAllTasks&#10;&#10;# Conflicts:&#10;#&#9;.gitignore">
+      <change afterPath="$PROJECT_DIR$/.idea/.idea.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/artifacts/java_basics_jar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/java_basics.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/airport.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/airport_1_0_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/GeometryCalculator.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_23_11_2020_13_52_[Default_Changelist]/.name" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_23_11_2020_13_52_[Default_Changelist]/shelved.patch" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_23_11_2020_13_52__Default_Changelist_.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_23_11_2020_13_57_[Default_Changelist]/shelved.patch" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_23_11_2020_13_57__Default_Changelist_.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_23_11_2020_13_58_[Default_Changelist]/shelved.patch" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_23_11_2020_13_58__Default_Changelist_.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_23_11_2020_14_10_[Default_Changelist]/shelved.patch" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_23_11_2020_14_10_[Default_Changelist]1/shelved.patch" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_23_11_2020_14_10__Default_Changelist_.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_23_11_2020_14_10__Default_Changelist_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_23_11_2020_14_13_[Default_Changelist]/shelved.patch" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_23_11_2020_14_13__Default_Changelist_.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_23_11_2020_14_14_[Default_Changelist]/shelved.patch" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_23_11_2020_14_14_[Default_Changelist]1/shelved.patch" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_23_11_2020_14_14__Default_Changelist_.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_23_11_2020_14_14__Default_Changelist_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_27_01_2021_18_55_[Default_Changelist]/shelved.patch" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_27_01_2021_18_55__Default_Changelist_.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_27_01_2021_1_07_[Default_Changelist]/shelved.patch" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_27_01_2021_1_07__Default_Changelist_.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_27_01_2021_1_08_[Default_Changelist]/shelved.patch" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_27_01_2021_1_08__Default_Changelist_.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Merge_at_25_01_2021_23_46_[Default_Changelist]/shelved.patch" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Merge_at_25_01_2021_23_46__Default_Changelist_.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_27_01_2021_18_06_[Default_Changelist]/shelved.patch" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_27_01_2021_18_06__Default_Changelist_.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/2/12cb81a767bf811ed39dbfc6ebe531c5ac755819" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/2/f/2ffb631e0c4d50d7108214524985e10461dbba33" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/d/4d97a4361bc637fe97b1fc25c7a8b62a0ee44511" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/5/1/51fdbbcb57e8f1898857d43cb964b6bf50ecde36" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/5/c/5c408796ddea86ad292e0decc15e96d89f3c0689" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/6/a/6a37678597b26d22f4c85deaaa2601494edf772e" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/6/b/6bc5ee322b7cbf65906ca82c0c1e313dbe3b436f" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/2/722bfee3cc88f613dc314635680d06fb2f434b89" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/4/84b9a9b03ce01c8b0119ef62010da275a82c08dd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/f/8f812433ba28dee2ed7d92824ca858bda9230644" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/0/901783ae8aae7a315952734f73a8addbcfd3718b" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/a/5/a5cc2925ca8258af241be7e5b0381edf30266302" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/a/d/ade012f05cd9afcbe5a783bd17c2672dc9731fa7" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/a/f/afff9dff8fc2d24d3617aa6a85b4a8b754a6e8e8" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/c/b/cb0f7466780bbb1de2d7e4a56a996e04e31861ec" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/c/b/cbe3c41a22f5c36365e2fb427f8499af89462401" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/d/2/d27c18e402c54d8bbd6b3b96a5bf9a7625e81213" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/d/8/d84b38f70c57fb82a5acc6063cdecc77b5919c7d" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/d/b/db938ba6c9d1600f7e359bc89db50bb7deca976b" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/d/c/dcd358b1f606e0869f205224a610e08fc35dcb3b" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/e/1/e1659d622d0fd46b50dc867c21dbb2b767ebdc08" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/4/f4edfedf1d37a7343b9325e0487a23003495daf3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/5/f5aa0f94ac9fcddfda13a41c3d6980b09c836da2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/04_NumbersStringsAndDates/CharsetView/CharsetView.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/04_NumbersStringsAndDates/FullNameFormatterRegExp/FullNameFormatterRegExp.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/04_NumbersStringsAndDates/Geometry/Geometry.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/04_NumbersStringsAndDates/HumanitarianHelp/HumanitarianHelp.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/04_NumbersStringsAndDates/SplitTextRegExp/SplitTextRegExp.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/05_ArraysAndCollections/05-01-ReverseMassive/05-01-ReverseMassive.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/05_ArraysAndCollections/05-02-ArrayCommands/05-02-ArrayCommands.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/05_ArraysAndCollections/05-02-Temperatures/05-02-Temperatures.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/05_ArraysAndCollections/05-03-Cross/05-03-Cross.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/05_ArraysAndCollections/05-03-TreeSet/05-03-TreeSet.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/05_ArraysAndCollections/05-04-HashMapAndTreeMap/05-04-HashMapAndTreeMap.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/05_ArraysAndCollections/05-05-CollectionsSort/05-05-CollectionsSort.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/06_InheritanceAndPolymorphism/06-01&amp;&amp;02-Bank/06-01&amp;&amp;02-Bank.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/06_InheritanceAndPolymorphism/06-03-AbstractClasses/06-03-AbstractClasses.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/06_InheritanceAndPolymorphism/06-03-AbstractClasses/target/classes/TerminalAbstract.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/06_InheritanceAndPolymorphism/06-03-AbstractClasses/target/classes/accounts/BankClient.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/06_InheritanceAndPolymorphism/06-03-AbstractClasses/target/classes/accounts/IndividualEntrepreneurs.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/06_InheritanceAndPolymorphism/06-03-AbstractClasses/target/classes/accounts/LegalEntity.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/06_InheritanceAndPolymorphism/06-03-AbstractClasses/target/classes/accounts/NaturalPerson.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/06_InheritanceAndPolymorphism/06-04-EmployeeInformation/06-04-EmployeeInformation.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/06_InheritanceAndPolymorphism/06_InheritanceAndPolymorphism.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/07_AdvancedOOPFeatures/homework_7.1/checkstyle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/07_AdvancedOOPFeatures/homework_7.1/homework_7.1.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/07_AdvancedOOPFeatures/homework_7.1/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/07_AdvancedOOPFeatures/homework_7.1/src/main/main1.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/07_AdvancedOOPFeatures/homework_7.1/src/test/test.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/07_AdvancedOOPFeatures/homework_7.1/target/checkstyle-cachefile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/07_AdvancedOOPFeatures/homework_7.1/target/checkstyle-checker.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/07_AdvancedOOPFeatures/homework_7.1/target/checkstyle-result.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/07_AdvancedOOPFeatures/homework_7.1/target/classes/Employee.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/07_AdvancedOOPFeatures/homework_7.1/target/classes/Main.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/07_AdvancedOOPFeatures/homework_7.1/target/test-classes/TestSortBySalaryAndAlphabet.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/07_AdvancedOOPFeatures/homework_7.2/Airport/Airport.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/07_AdvancedOOPFeatures/homework_7.2/Airport/checkstyle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/07_AdvancedOOPFeatures/homework_7.2/Airport/lib/airport-1.0.1.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/07_AdvancedOOPFeatures/homework_7.2/Airport/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/07_AdvancedOOPFeatures/homework_7.2/Airport/src/main/main.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/07_AdvancedOOPFeatures/homework_7.2/Airport/src/test/test2.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/07_AdvancedOOPFeatures/homework_7.2/Airport/target/checkstyle-cachefile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/07_AdvancedOOPFeatures/homework_7.2/Airport/target/checkstyle-checker.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/07_AdvancedOOPFeatures/homework_7.2/Airport/target/checkstyle-result.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/07_AdvancedOOPFeatures/homework_7.2/Airport/target/classes/Main.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/07_AdvancedOOPFeatures/homework_7.2/Airport/target/test-classes/TestFindPlanesLeavingInTheNextTwoHours.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/07_AdvancedOOPFeatures/homework_7.2/Employees/Employees.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/07_AdvancedOOPFeatures/homework_7.2/Employees/checkstyle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/07_AdvancedOOPFeatures/homework_7.2/Employees/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/07_AdvancedOOPFeatures/homework_7.2/Employees/src/main/main2.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/07_AdvancedOOPFeatures/homework_7.2/Employees/src/test/test1.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/07_AdvancedOOPFeatures/homework_7.2/Employees/target/checkstyle-cachefile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/07_AdvancedOOPFeatures/homework_7.2/Employees/target/checkstyle-checker.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/07_AdvancedOOPFeatures/homework_7.2/Employees/target/checkstyle-result.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/07_AdvancedOOPFeatures/homework_7.2/Employees/target/classes/Employee.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/07_AdvancedOOPFeatures/homework_7.2/Employees/target/classes/Main.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/07_AdvancedOOPFeatures/homework_7.2/Employees/target/test-classes/TestFindEmployeeByHighestSalary.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/07_AdvancedOOPFeatures/homework_7.2/homework_7.2.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/08_ExceptionsDebuggingAndTesting/homework_8.1/ConsoleCustomerList/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/08_ExceptionsDebuggingAndTesting/homework_8.1/ConsoleCustomerList/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/08_ExceptionsDebuggingAndTesting/homework_8.1/ConsoleCustomerList/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/08_ExceptionsDebuggingAndTesting/homework_8.1/ConsoleCustomerList/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/08_ExceptionsDebuggingAndTesting/homework_8.1/ConsoleCustomerList/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/08_ExceptionsDebuggingAndTesting/homework_8.1/ConsoleCustomerList/ConsoleCustomerList.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/08_ExceptionsDebuggingAndTesting/homework_8.1/ConsoleCustomerList/checkstyle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/08_ExceptionsDebuggingAndTesting/homework_8.1/ConsoleCustomerList/out/production/ConsoleCustomerList/Customer.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/08_ExceptionsDebuggingAndTesting/homework_8.1/ConsoleCustomerList/out/production/ConsoleCustomerList/CustomerStorage.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/08_ExceptionsDebuggingAndTesting/homework_8.1/ConsoleCustomerList/out/production/ConsoleCustomerList/Main.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/08_ExceptionsDebuggingAndTesting/homework_8.1/ConsoleCustomerList/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/08_ExceptionsDebuggingAndTesting/homework_8.1/ConsoleCustomerList/src/main/main.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/08_ExceptionsDebuggingAndTesting/homework_8.1/ConsoleCustomerList/src/main/main3.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/08_ExceptionsDebuggingAndTesting/homework_8.1/ConsoleCustomerList/src/test/test.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/08_ExceptionsDebuggingAndTesting/homework_8.1/ConsoleCustomerList/src/test/test3.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/08_ExceptionsDebuggingAndTesting/homework_8.1/ConsoleCustomerList/target/checkstyle-checker.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/08_ExceptionsDebuggingAndTesting/homework_8.1/ConsoleCustomerList/target/checkstyle-result.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/08_ExceptionsDebuggingAndTesting/homework_8.1/ConsoleCustomerList/target/classes/Customer.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/08_ExceptionsDebuggingAndTesting/homework_8.1/ConsoleCustomerList/target/classes/CustomerStorage.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/08_ExceptionsDebuggingAndTesting/homework_8.1/ConsoleCustomerList/target/classes/Exceptions/EmailFormatException.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/08_ExceptionsDebuggingAndTesting/homework_8.1/ConsoleCustomerList/target/classes/Exceptions/PhoneNumberException.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/08_ExceptionsDebuggingAndTesting/homework_8.1/ConsoleCustomerList/target/classes/Main.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/08_ExceptionsDebuggingAndTesting/homework_8.1/ConsoleCustomerList/target/test-classes/ExceptionTests.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/08_ExceptionsDebuggingAndTesting/homework_8.2/SPBMetro/logs/correctStations.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/08_ExceptionsDebuggingAndTesting/homework_8.2/SPBMetro/logs/exceptions.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/08_ExceptionsDebuggingAndTesting/homework_8.2/SPBMetro/logs/incorrectStations.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/08_ExceptionsDebuggingAndTesting/homework_8.2/SPBMetro/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/08_ExceptionsDebuggingAndTesting/homework_8.2/SPBMetro/spb-metro.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/08_ExceptionsDebuggingAndTesting/homework_8.2/SPBMetro/src/main/test/test1.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/java_basics.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/airport-1.0.1.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/java_basics_jar/java_basics.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/05-01-ReverseMassive/ReverseMassiveMain.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/05-02-ArrayCommands/ArrayCommandScanner.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/05-02-ArrayCommands/Commands.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/05-02-ArrayCommands/CommandsScanner.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/05-02-ArrayCommands/ToDoList.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/05-02-Temperatures/Temperatures.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/05-03-Cross/CrossBuilder.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/05-03-TreeSet/CommandsScannerTreeSet.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/05-03-TreeSet/CommandsTreeSet.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/05-04-HashMapAndTreeMap/BookCommands.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/05-04-HashMapAndTreeMap/Enums/InputType.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/05-04-HashMapAndTreeMap/MapPhoneBook$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/05-04-HashMapAndTreeMap/MapPhoneBook.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/05-05-CollectionsSort/MainSort.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/05-05-CollectionsSort/training.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/06-01&amp;&amp;02-Bank/Accounts/BankAccount.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/06-01&amp;&amp;02-Bank/Accounts/CardAccount.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/06-01&amp;&amp;02-Bank/Accounts/DepositAccount.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/06-01&amp;&amp;02-Bank/Terminal.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/06-03-AbstractClasses/Accounts/BankClient.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/06-03-AbstractClasses/Accounts/IndividualEntrepreneurs.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/06-03-AbstractClasses/Accounts/LegalEntity.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/06-03-AbstractClasses/Accounts/NaturalPerson.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/06-03-AbstractClasses/TerminalAbstract.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/06-04-EmployeeInformation/HRDepartment.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/06-04-EmployeeInformation/HR_Department.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/06-04-EmployeeInformation/company_structure/AbstractEmployee.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/06-04-EmployeeInformation/company_structure/Company.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/06-04-EmployeeInformation/company_structure/Employee.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/06-04-EmployeeInformation/company_structure/Manager.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/06-04-EmployeeInformation/company_structure/Operator.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/06-04-EmployeeInformation/company_structure/TopManager.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/java_basics/AirportTest.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/java_basics/ArrayCommandScanner.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/java_basics/BirthdayCalendarMain.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/java_basics/BookCommands.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/java_basics/Calculator.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/java_basics/Cat.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/java_basics/CatColour.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/java_basics/CatLoader.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/java_basics/CharsetViewsMain.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/java_basics/Commands.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/java_basics/CommandsScanner.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/java_basics/CommandsScannerTreeSet.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/java_basics/CommandsTreeSet.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/java_basics/Container.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/java_basics/CrossBuilder.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/java_basics/Enums/InputType.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/java_basics/FullNameFormatter.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/java_basics/GeometryCalculator.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/java_basics/GeometryLoader.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/java_basics/InputText" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/java_basics/Loader.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/java_basics/META-INF/MANIFEST.MF" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/java_basics/META-INF/java_basics.kotlin_module" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/java_basics/Main.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/java_basics/MainSort.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/java_basics/MapPhoneBook$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/java_basics/MapPhoneBook.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/java_basics/MapPhoneBookCommands.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/java_basics/MaskingInformation.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/java_basics/MaskingInformationReq.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/java_basics/MinMaxValues.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/java_basics/PhoneCleanerClass.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/java_basics/ReverseMassiveMain.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/java_basics/RoadController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/java_basics/SplitText.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/java_basics/Temperatures.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/java_basics/TestNameFormatter.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/java_basics/ToDoList.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/java_basics/TotalEarningsCalculatorReqExp.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/java_basics/core/Camera.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/java_basics/core/Car.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="08_Exceptions" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="LogFilters">
+    <option name="FILTER_ERRORS" value="false" />
+    <option name="FILTER_WARNINGS" value="false" />
+    <option name="FILTER_INFO" value="true" />
+    <option name="FILTER_DEBUG" value="true" />
+    <option name="CUSTOM_FILTER" />
+  </component>
+  <component name="ProjectId" id="1nr3NxJLJTshpkC2yCczufNug0x" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="Git.Branch.Popup.ShowAllRemotes" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/05_ArraysAndCollections/05-01-ReverseMassive" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\Projects\SKillbox\java_basics\05_ArraysAndCollections\05-01-ReverseMassive" />
+      <recent name="E:\Projects\SKillbox\java_basics\05_ArraysAndCollections\05-02-ArrayCommands" />
+      <recent name="E:\Projects\SKillbox\java_basics\05_ArraysAndCollections\05-02-Temperatures" />
+      <recent name="E:\Projects\SKillbox\java_basics\05_ArraysAndCollections\05-03-Cross" />
+      <recent name="E:\Projects\SKillbox\java_basics\05_ArraysAndCollections\05-03-TreeSet" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\Projects\SKillbox\java_basics\07_AdvancedOOPFeatures\homework_7.2\Employees" />
+      <recent name="E:\Projects\SKillbox\java_basics\08_ExceptionsDebuggingAndTesting\homework_8.2\SPBMetro" />
+      <recent name="E:\Projects\SKillbox\java_basics\08_ExceptionsDebuggingAndTesting\homework_8.1\ConsoleCustomerList" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.ArrayCommandScanner">
+    <configuration name="ArrayCommandScanner" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ArrayCommandScanner" />
+      <module name="05-02-ArrayCommands" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main (2)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="ConsoleCustomerList" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ExceptionTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ConsoleCustomerList" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="ExceptionTests" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RouteCalculatorTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="spb-metro" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="RouteCalculatorTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RouteCalculatorTest.testGetShortestRoute_TwoConnections" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="spb-metro" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="RouteCalculatorTest" />
+      <option name="METHOD_NAME" value="testGetShortestRoute_TwoConnections" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.ArrayCommandScanner" />
+      <item itemvalue="Application.Main (2)" />
+      <item itemvalue="JUnit.ExceptionTests" />
+      <item itemvalue="JUnit.RouteCalculatorTest" />
+      <item itemvalue="JUnit.RouteCalculatorTest.testGetShortestRoute_TwoConnections" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.RouteCalculatorTest.testGetShortestRoute_TwoConnections" />
+        <item itemvalue="JUnit.RouteCalculatorTest" />
+        <item itemvalue="JUnit.ExceptionTests" />
+        <item itemvalue="Application.Main (2)" />
+        <item itemvalue="Application.ArrayCommandScanner" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration>C:\Users\Liegaro\AppData\Roaming\Subversion</configuration>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="c6589fb5-f1f9-477d-bf4c-b6184bc750d3" name="Default Changelist" comment="" />
+      <created>1612134345273</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1612134345273</updated>
+      <workItem from="1612134346365" duration="481000" />
+      <workItem from="1612134851873" duration="1974000" />
+      <workItem from="1612136855521" duration="3872000" />
+      <workItem from="1612158268703" duration="2051000" />
+    </task>
+    <task id="LOCAL-00001" summary="q">
+      <created>1612136751615</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1612136751615</updated>
+    </task>
+    <task id="LOCAL-00002" summary="q">
+      <created>1612137673925</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1612137673926</updated>
+    </task>
+    <task id="LOCAL-00003" summary="q">
+      <created>1612138966159</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1612138966159</updated>
+    </task>
+    <task id="LOCAL-00004" summary="q">
+      <created>1612139048896</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1612139048896</updated>
+    </task>
+    <task id="LOCAL-00005" summary="q">
+      <created>1612162872666</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1612162872666</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="q" />
+    <MESSAGE value="Merge branch 'main' into GH_masterBranchWithAllTasks&#10;&#10;# Conflicts:&#10;#&#9;.gitignore" />
+    <option name="LAST_COMMIT_MESSAGE" value="Merge branch 'main' into GH_masterBranchWithAllTasks&#10;&#10;# Conflicts:&#10;#&#9;.gitignore" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="657" y="144" key="#Main_(2)" timestamp="1612135309514">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="657" y="144" key="#Main_(2)/-1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1612135309514" />
+    <state x="440" y="99" key="#Project_Structure" timestamp="1612158113174">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="440" y="99" key="#Project_Structure/-1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1612158113174" />
+    <state x="414" y="180" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1612138362466">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="414" y="180" key="#com.intellij.execution.impl.EditConfigurationsDialog/-1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1612138362466" />
+    <state x="723" y="327" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1612136298469">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="723" y="327" key="#com.intellij.fileTypes.FileTypeChooser/-1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1612136298469" />
+    <state x="397" y="121" key="CommitChangelistDialog2" timestamp="1612163392670">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="397" y="121" key="CommitChangelistDialog2/-1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1612163392670" />
+    <state x="761" y="289" key="FileChooserDialogImpl" timestamp="1612158207398">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="761" y="289" key="FileChooserDialogImpl/-1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1612158207398" />
+    <state width="1876" height="383" key="GridCell.Tab.0.bottom" timestamp="1612163097233">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state width="1876" height="383" key="GridCell.Tab.0.bottom/-1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1612163097233" />
+    <state width="1876" height="383" key="GridCell.Tab.0.center" timestamp="1612163097233">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state width="1876" height="383" key="GridCell.Tab.0.center/-1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1612163097233" />
+    <state width="1876" height="383" key="GridCell.Tab.0.left" timestamp="1612163097232">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state width="1876" height="383" key="GridCell.Tab.0.left/-1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1612163097232" />
+    <state width="1876" height="383" key="GridCell.Tab.0.right" timestamp="1612163097233">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state width="1876" height="383" key="GridCell.Tab.0.right/-1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1612163097233" />
+    <state x="540" y="260" key="IDE.errors.dialog" timestamp="1612137865836">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="540" y="260" key="IDE.errors.dialog/-1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1612137865836" />
+    <state x="490" y="180" key="Maven.ArtifactSearchDialog" timestamp="1612138947265">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="490" y="180" key="Maven.ArtifactSearchDialog/-1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1612138947265" />
+    <state x="646" y="300" width="857" height="591" key="NewModule_or_Project.wizard" timestamp="1612136677496">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="646" y="300" width="857" height="591" key="NewModule_or_Project.wizard/-1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1612136677496" />
+    <state x="533" y="236" key="RollbackChangesDialog" timestamp="1612138926663">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="533" y="236" key="RollbackChangesDialog/-1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1612138926663" />
+    <state x="461" y="170" key="SettingsEditor" timestamp="1612158209535">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="461" y="170" key="SettingsEditor/-1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1612158209535" />
+    <state x="552" y="258" key="Vcs.Push.Dialog.v2" timestamp="1612163061299">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="552" y="258" key="Vcs.Push.Dialog.v2/-1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1612163061299" />
+    <state x="769" y="439" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1612163077087">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="769" y="439" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/-1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1612163077087" />
+    <state x="-1826" y="-17" width="1401" height="626" maximized="true" key="dock-window-1" timestamp="1612158016272">
+      <screen x="-1920" y="0" width="1920" height="1050" />
+    </state>
+    <state x="-1826" y="-17" width="1401" height="626" maximized="true" key="dock-window-1/-1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1612158016272" />
+    <state x="351" y="-8" width="1401" height="626" maximized="true" key="dock-window-2" timestamp="1612159693445">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="351" y="-8" width="1401" height="626" maximized="true" key="dock-window-2/-1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1612159693445" />
+    <state x="342" y="186" key="new project wizard" timestamp="1612136648186">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="342" y="186" key="new project wizard/-1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1612136648186" />
+  </component>
+</project>

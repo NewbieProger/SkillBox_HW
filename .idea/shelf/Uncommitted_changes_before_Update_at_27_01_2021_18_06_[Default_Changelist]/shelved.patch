@@ -1,0 +1,203 @@
+Index: 08_ExceptionsDebuggingAndTesting/homework_8.1/ConsoleCustomerList/src/main/java/Customer.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- 08_ExceptionsDebuggingAndTesting/homework_8.1/ConsoleCustomerList/src/main/java/Customer.java	(date 1608557964000)
++++ 08_ExceptionsDebuggingAndTesting/homework_8.1/ConsoleCustomerList/src/main/java/Customer.java	(date 1608557964000)
+@@ -0,0 +1,27 @@
++public class Customer {
++    private final String name;
++    private final String phone;
++    private final String email;
++
++    public String getName() {
++        return name;
++    }
++
++    public String getPhone() {
++        return phone;
++    }
++
++    public String getEmail() {
++        return email;
++    }
++
++    public Customer(String name, String phone, String email) {
++        this.name = name;
++        this.phone = phone;
++        this.email = email;
++    }
++
++    public String toString() {
++        return name + " - " + email + " - " + phone;
++    }
++}
+Index: 08_ExceptionsDebuggingAndTesting/homework_8.1/ConsoleCustomerList/src/main/java/CustomerStorage.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- 08_ExceptionsDebuggingAndTesting/homework_8.1/ConsoleCustomerList/src/main/java/CustomerStorage.java	(date 1608557964000)
++++ 08_ExceptionsDebuggingAndTesting/homework_8.1/ConsoleCustomerList/src/main/java/CustomerStorage.java	(date 1608557964000)
+@@ -0,0 +1,37 @@
++import java.util.HashMap;
++import java.util.Map;
++
++public class CustomerStorage {
++    private final Map<String, Customer> storage;
++
++    public CustomerStorage() {
++        storage = new HashMap<>();
++    }
++
++    public void addCustomer(String data) {
++        final int INDEX_NAME = 0;
++        final int INDEX_SURNAME = 1;
++        final int INDEX_EMAIL = 2;
++        final int INDEX_PHONE = 3;
++
++        String[] components = data.split("\\s+");
++        String name = components[INDEX_NAME] + " " + components[INDEX_SURNAME];
++        storage.put(name, new Customer(name, components[INDEX_PHONE], components[INDEX_EMAIL]));
++    }
++
++    public void listCustomers() {
++        storage.values().forEach(System.out::println);
++    }
++
++    public void removeCustomer(String name) {
++        storage.remove(name);
++    }
++
++    public Customer getCustomer(String name) {
++        return storage.get(name);
++    }
++
++    public int getCount() {
++        return storage.size();
++    }
++}
+\ No newline at end of file
+Index: 08_ExceptionsDebuggingAndTesting/homework_8.1/ConsoleCustomerList/src/main/java/Main.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- 08_ExceptionsDebuggingAndTesting/homework_8.1/ConsoleCustomerList/src/main/java/Main.java	(date 1608557964000)
++++ 08_ExceptionsDebuggingAndTesting/homework_8.1/ConsoleCustomerList/src/main/java/Main.java	(date 1608557964000)
+@@ -0,0 +1,35 @@
++import java.util.Scanner;
++
++public class Main {
++    private static final String ADD_COMMAND = "add Василий Петров " +
++            "vasily.petrov@gmail.com +79215637722";
++    private static final String COMMAND_EXAMPLES = "\t" + ADD_COMMAND + "\n" +
++            "\tlist\n\tcount\n\tremove Василий Петров";
++    private static final String COMMAND_ERROR = "Wrong command! Available command examples: \n" +
++            COMMAND_EXAMPLES;
++    private static final String helpText = "Command examples:\n" + COMMAND_EXAMPLES;
++
++    public static void main(String[] args) {
++        Scanner scanner = new Scanner(System.in);
++        CustomerStorage executor = new CustomerStorage();
++
++        while (true) {
++            String command = scanner.nextLine();
++            String[] tokens = command.split("\\s+", 2);
++
++            if (tokens[0].equals("add")) {
++                executor.addCustomer(tokens[1]);
++            } else if (tokens[0].equals("list")) {
++                executor.listCustomers();
++            } else if (tokens[0].equals("remove")) {
++                executor.removeCustomer(tokens[1]);
++            } else if (tokens[0].equals("count")) {
++                System.out.println("There are " + executor.getCount() + " customers");
++            } else if (tokens[0].equals("help")) {
++                System.out.println(helpText);
++            } else {
++                System.out.println(COMMAND_ERROR);
++            }
++        }
++    }
++}
+Index: 08_ExceptionsDebuggingAndTesting/homework_8.1/ConsoleCustomerList/src/test/java/ExceptionTests.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- 08_ExceptionsDebuggingAndTesting/homework_8.1/ConsoleCustomerList/src/test/java/ExceptionTests.java	(date 1608557964000)
++++ 08_ExceptionsDebuggingAndTesting/homework_8.1/ConsoleCustomerList/src/test/java/ExceptionTests.java	(date 1608557964000)
+@@ -0,0 +1,71 @@
++import org.junit.jupiter.api.BeforeEach;
++import org.junit.jupiter.api.DisplayName;
++import org.junit.jupiter.api.Test;
++
++import static org.junit.jupiter.api.Assertions.assertEquals;
++import static org.junit.jupiter.api.Assertions.assertThrows;
++
++@DisplayName("Проверка выброса исключений")
++public class ExceptionTests {
++
++    private CustomerStorage storage;
++
++    @BeforeEach
++    void beforeEach() {
++        storage = new CustomerStorage();
++    }
++
++    @Test
++    @DisplayName("Передано более 4 слов в строке")
++    void moreThenFourElementsInputString() {
++        final String input = "Василий Петров vasily.petrov@gmail.com +79215637722 5слово";
++
++        assertThrows(Throwable.class, () -> storage.addCustomer(input),
++                "Не выброшено исключение при количестве элементов в строке больше 4");
++    }
++
++    @Test
++    @DisplayName("Передано менее 4 слов в строке")
++    void lessThanFourElementsInputString() {
++        final String input = "Василий Петров vasily.petrov@gmail.com";
++        assertThrows(Throwable.class, () -> storage.addCustomer(input),
++                "Не выброшено исключение при количестве элементов в строке меньше 4");
++    }
++
++    @Test
++    @DisplayName("Неверный формат email")
++    void wrongEmailFormatWithoutAt() {
++        final String wrongEmail = "thisIsNotAnEmail";
++        final String input = "Василий Петров " + wrongEmail + " +79215637722";
++
++        assertThrows(Throwable.class, () -> storage.addCustomer(input),
++                "Не выброшено исключение при неверном формате email -> " + wrongEmail);
++    }
++
++    @Test
++    @DisplayName("Неверный формат номера")
++    void wrongPhoneFormatWithoutDigits() {
++        final String wrongPhoneNumber = "+thisIsNotANumber";
++        final String input = "Василий Петров hello@skillbox.ru " + wrongPhoneNumber;
++
++        assertThrows(Throwable.class, () -> storage.addCustomer(input),
++                "Не выброшено исключение при неверном формате номера -> " + wrongPhoneNumber);
++    }
++
++    @Test
++    @DisplayName("Тест добавления корректных данных Customer")
++    void insertCorrectData() {
++        final String name = "Василий Петров";
++        final String email = "hello@skillbox.ru";
++        final String phone = "+79991234567";
++        final String input = String.join(" ", name, email, phone);
++
++        storage.addCustomer(input);
++        assertEquals(1, storage.getCount());
++
++        Customer customer = storage.getCustomer(name);
++        assertEquals(name, customer.getName());
++        assertEquals(email, customer.getEmail());
++        assertEquals(phone, customer.getPhone());
++    }
++}

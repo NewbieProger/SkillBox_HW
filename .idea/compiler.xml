@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="ConsoleCustomerList" />
+        <module name="spb-metro" />
+        <module name="LambdaExpressions7.2-Employee" />
+        <module name="LambdaExpressions7.1" />
+        <module name="LambdaExpressions7.2-Airport" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="asdasd" target="11" />
+      <module name="asdasd.main" target="11" />
+      <module name="asdasd.test" target="11" />
+      <module name="FullNameFormatterRegExp" target="11" />
+      <module name="FullNameFormatterRegExp.main" target="11" />
+      <module name="FullNameFormatterRegExp.test" target="11" />
+      <module name="SplitText" target="11" />
+      <module name="SplitText_main" target="11" />
+      <module name="SplitText_test" target="11" />
+      <module name="TotalEarningsCalculatorReq.main" target="11" />
+      <module name="TotalEarningsCalculatorReq.test" target="11" />
+      <module name="TotalEarningsCalculatorReqExp" target="11" />
+      <module name="TotalEarningsCalculatorReqExp.main" target="11" />
+      <module name="TotalEarningsCalculatorReqExp.test" target="11" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="java_basics" options="--add-exports jdk.management.agent/jdk.internal.agent=ALL-UNNAMED" />
+    </option>
+  </component>
+</project>

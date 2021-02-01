@@ -70,7 +70,6 @@ cmake-build-*/
 
 # File-based project format
 *.iws
-*.ipr
 
 # IntelliJ
 .idea/*
@@ -91,7 +90,7 @@ crashlytics.properties
 crashlytics-build.properties
 fabric.properties
 
-# Editor-based RestClient
+# Editor-based Rest Client
 .idea/httpRequests
 
 # Android studio 3.1+ serialized cache file
@@ -144,4 +143,3 @@ $RECYCLE.BIN/
 *.iml
 *.xml
 .idea
-

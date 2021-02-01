@@ -1,0 +1,11 @@
+<component name="ArtifactManager">
+  <artifact type="jar" build-on-make="true" name="java_basics:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/java_basics_jar</output-path>
+    <root id="archive" name="java_basics.jar">
+      <element id="module-output" name="RoadController" />
+      <element id="module-output" name="Cat" />
+      <element id="module-output" name="Airport" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/lib/airport-1.0.1.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>

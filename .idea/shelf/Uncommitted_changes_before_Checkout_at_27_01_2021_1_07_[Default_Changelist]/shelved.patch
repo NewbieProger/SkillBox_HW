@@ -1,0 +1,62 @@
+Index: .gitignore
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>.DS_Store\r\n# Created by https://www.gitignore.io/api/java,windows,jetbrains\r\n# Edit at https://www.gitignore.io/?templates=java,windows,jetbrains\r\n\r\n### Java ###\r\n# Compiled class file\r\n*.class\r\n\r\n# Log file\r\n*.log\r\n\r\n# BlueJ files\r\n*.ctxt\r\n\r\n# Mobile Tools for Java (J2ME)\r\n.mtj.tmp/\r\n\r\n# Package Files #\r\n*.jar\r\n*.war\r\n*.nar\r\n*.ear\r\n*.zip\r\n*.tar.gz\r\n*.rar\r\n\r\n# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml\r\nhs_err_pid*\r\n\r\n### JetBrains ###\r\n# Covers JetBrains IDEs: IntelliJ, RubyMine, PhpStorm, AppCode, PyCharm, CLion, Android Studio and WebStorm\r\n# Reference: https://intellij-support.jetbrains.com/hc/en-us/articles/206544839\r\n\r\n# User-specific stuff\r\n.idea/**/workspace.xml\r\n.idea/**/tasks.xml\r\n.idea/**/usage.statistics.xml\r\n.idea/**/dictionaries\r\n.idea/**/shelf\r\n\r\n# Generated files\r\n.idea/**/contentModel.xml\r\n\r\n# Sensitive or high-churn files\r\n.idea/**/dataSources/\r\n.idea/**/dataSources.ids\r\n.idea/**/dataSources.local.xml\r\n.idea/**/sqlDataSources.xml\r\n.idea/**/dynamic.xml\r\n.idea/**/uiDesigner.xml\r\n.idea/**/dbnavigator.xml\r\n\r\n# Gradle\r\n.idea/**/gradle.xml\r\n.idea/**/libraries\r\n\r\n# Gradle and Maven with auto-import\r\n# When using Gradle or Maven with auto-import, you should exclude module files,\r\n# since they will be recreated, and may cause churn.  Uncomment if using\r\n# auto-import.\r\n# .idea/modules.xml\r\n# .idea/modules\r\n# *.ipr\r\n\r\n# CMake\r\ncmake-build-*/\r\n\r\n# Mongo Explorer plugin\r\n.idea/**/mongoSettings.xml\r\n\r\n# File-based project format\r\n*.iws\r\n\r\n# IntelliJ\r\n.idea/*\r\nout/\r\n\r\n# mpeltonen/sbt-idea plugin\r\n.idea_modules/\r\n\r\n# JIRA plugin\r\natlassian-ide-plugin.xml\r\n\r\n# Cursive Clojure plugin\r\n.idea/replstate.xml\r\n\r\n# Crashlytics plugin (for Android Studio and IntelliJ)\r\ncom_crashlytics_export_strings.xml\r\ncrashlytics.properties\r\ncrashlytics-build.properties\r\nfabric.properties\r\n\r\n# Editor-based RestClient\r\n.idea/httpRequests\r\n\r\n# Android studio 3.1+ serialized cache file\r\n.idea/caches/build_file_checksums.ser\r\n\r\n### JetBrains Patch ###\r\n# Comment Reason: https://github.com/joeblau/gitignore.io/issues/186#issuecomment-215987721\r\n\r\n# modules.xml\r\n# .idea/misc.xml\r\n# *.ipr\r\n\r\n# Sonarlint plugin\r\n.idea/**/sonarlint/\r\n\r\n# SonarQube Plugin\r\n.idea/**/sonarIssues.xml\r\n\r\n# Markdown Navigator plugin\r\n.idea/**/markdown-navigator.xml\r\n.idea/**/markdown-navigator/\r\n\r\n### Windows ###\r\n# Windows thumbnail cache files\r\nThumbs.db\r\nThumbs.db:encryptable\r\nehthumbs.db\r\nehthumbs_vista.db\r\n\r\n# Dump file\r\n*.stackdump\r\n\r\n# Folder config file\r\n[Dd]esktop.ini\r\n\r\n# Recycle Bin used on file shares\r\n$RECYCLE.BIN/\r\n\r\n# Windows Installer files\r\n*.cab\r\n*.msi\r\n*.msix\r\n*.msm\r\n*.msp\r\n\r\n# Windows shortcuts\r\n*.lnk\r\n\r\n# End of https://www.gitignore.io/api/java,windows,jetbrains\r\n*.iml\r\n*.xml\r\n.idea
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .gitignore	(revision cee93a904d7c3f51a31de0b5211ec74c4cd18fb1)
++++ .gitignore	(date 1611593209377)
+@@ -70,6 +70,7 @@
+ 
+ # File-based project format
+ *.iws
++*.ipr
+ 
+ # IntelliJ
+ .idea/*
+@@ -142,4 +143,4 @@
+ # End of https://www.gitignore.io/api/java,windows,jetbrains
+ *.iml
+ *.xml
+-.idea
+\ No newline at end of file
++.idea
+Index: 04_NumbersStringsAndDates/PhoneCleaner/src/PhoneCleanerClass.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>import java.util.Scanner;\r\n\r\npublic class PhoneCleanerClass {\r\n    public static void main(String[] args) {\r\n\r\n        Scanner scanner = new Scanner(System.in);\r\n        while (true) {\r\n            String input = scanner.nextLine();\r\n            if (input.equals(\"0\")) {\r\n                break;\r\n            }\r\n            String replacedNumber = input.trim().replaceAll(\"[\\\\s-()]\", \"\")\r\n                    .replaceAll(\"^\\\\+7|8\", \"7\");\r\n\r\n            boolean countAndStartDigits = replacedNumber.matches(\"^7.{10}$\");\r\n            boolean missedSevenAtStart = replacedNumber.matches(\"^9.{9}$\");\r\n\r\n            if (countAndStartDigits) {\r\n                System.out.println(replacedNumber);\r\n            } else if (missedSevenAtStart) {\r\n                System.out.println(\"7\" + replacedNumber);\r\n            } else System.out.println(\"Неверный формат номера\");\r\n        }\r\n    }\r\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- 04_NumbersStringsAndDates/PhoneCleaner/src/PhoneCleanerClass.java	(revision cee93a904d7c3f51a31de0b5211ec74c4cd18fb1)
++++ 04_NumbersStringsAndDates/PhoneCleaner/src/PhoneCleanerClass.java	(date 1611593209340)
+@@ -9,8 +9,8 @@
+             if (input.equals("0")) {
+                 break;
+             }
+-            String replacedNumber = input.trim().replaceAll("[\\s-()]", "")
+-                    .replaceAll("^\\+7|8", "7");
++            String replacedNumber = input.trim().replaceAll("[\\D]", "")
++                    .replaceAll("^8", "7");
+ 
+             boolean countAndStartDigits = replacedNumber.matches("^7.{10}$");
+             boolean missedSevenAtStart = replacedNumber.matches("^9.{9}$");
+Index: 04_NumbersStringsAndDates/SplitTextRegExp/src/SplitText.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>import java.io.IOException;\r\nimport java.net.URISyntaxException;\r\nimport java.net.URL;\r\nimport java.nio.file.Files;\r\nimport java.nio.file.Paths;\r\n\r\npublic class SplitText {\r\n    public static void main(String[] args) throws IOException, URISyntaxException {\r\n        SplitText qwe = new SplitText();\r\n        String text = qwe.getText(\"InputText\", \" \");\r\n\r\n\r\n        String replacedText = text.replaceAll(\"[.,/#!$%^&*;:{}=_`~()\\\\-\\\\d]\", \"\")\r\n                .replaceAll(\"\\\\s{2}\", \" \")\r\n                .replace(\"-\", \" \")\r\n                .replaceAll(\"\\\\s\", \"\\r\\n\");\r\n\r\n        String[] strings = replacedText.split(\" \");\r\n        for (String someThing : strings) {\r\n            System.out.println(someThing);\r\n        }\r\n    }\r\n\r\n    private String getText(String file, String delimiter) throws IOException, URISyntaxException {\r\n\r\n        URL resource = this.getClass().getResource(file);\r\n\r\n        return String.join(delimiter, Files.readAllLines(Paths.get(resource.toURI())));\r\n\r\n    }\r\n\r\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- 04_NumbersStringsAndDates/SplitTextRegExp/src/SplitText.java	(revision cee93a904d7c3f51a31de0b5211ec74c4cd18fb1)
++++ 04_NumbersStringsAndDates/SplitTextRegExp/src/SplitText.java	(date 1611593209341)
+@@ -10,7 +10,7 @@
+         String text = qwe.getText("InputText", " ");
+ 
+ 
+-        String replacedText = text.replaceAll("[.,/#!$%^&*;:{}=_`~()\\-\\d]", "")
++        String replacedText = text.replaceAll("[.,#!$%&;:{}=_`~()\\d]", "")
+                 .replaceAll("\\s{2}", " ")
+                 .replace("-", " ")
+                 .replaceAll("\\s", "\r\n");
