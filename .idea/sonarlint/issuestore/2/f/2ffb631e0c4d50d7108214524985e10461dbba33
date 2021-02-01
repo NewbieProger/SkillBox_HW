@@ -1,18 +1,0 @@
-
-[
-java:S1854"@Remove this useless assignment to local variable "circleRadius".(…ÜÎ¥úÿÿÿÿ
-[
-java:S1854"ERemove this useless assignment to local variable "basisHeightInsert".(°ÅÀÛ
-T
-java:S1854*"?Remove this useless assignment to local variable "threeBasics".(Æ—õb
-N	java:S106"9Replace this use of System.out or System.err by a logger.(’¢şø
-7	java:S131""Add a default case to this switch.(¤¢™
-N	java:S106"9Replace this use of System.out or System.err by a logger.(„Éá¹
-N	java:S106"9Replace this use of System.out or System.err by a logger.(äµ
-N	java:S106#"9Replace this use of System.out or System.err by a logger.(©¸ãß
-M	java:S106)"9Replace this use of System.out or System.err by a logger.(˜Ü§4
-S	java:S106:"9Replace this use of System.out or System.err by a logger.(€– ßÿÿÿÿÿ
-S	java:S106?"9Replace this use of System.out or System.err by a logger.(°÷‘‚ÿÿÿÿÿ
-S	java:S106D"9Replace this use of System.out or System.err by a logger.(¿ü¥³ÿÿÿÿÿ
-S	java:S106P"9Replace this use of System.out or System.err by a logger.(ÇÇ·µùÿÿÿÿ
-S	java:S106S"9Replace this use of System.out or System.err by a logger.(óÁŞÉùÿÿÿÿ
