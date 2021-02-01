@@ -22,7 +22,6 @@ public class ExceptionTests {
 
         assertThrows(Throwable.class, () -> storage.addCustomer(input),
                 "Не выброшено исключение при количестве элементов в строке больше 4");
-        assertTrue(true, toString());
     }
 
     @Test
