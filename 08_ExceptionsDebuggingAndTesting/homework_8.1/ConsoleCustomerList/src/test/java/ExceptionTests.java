@@ -3,8 +3,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertThrows;
+import static org.junit.jupiter.api.Assertions.*;
 
 @DisplayName("Проверка выброса исключений")
 public class ExceptionTests {
@@ -23,6 +22,7 @@ public class ExceptionTests {
 
         assertThrows(Throwable.class, () -> storage.addCustomer(input),
                 "Не выброшено исключение при количестве элементов в строке больше 4");
+        assertTrue(true, toString());
     }
 
     @Test
