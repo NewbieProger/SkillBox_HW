@@ -297,17 +297,18 @@
     <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\Projects\SKillbox\java_basics" />
+      <recent name="E:\Projects\SKillbox\java_basics\07_AdvancedOOPFeatures\homework_7.2\Employees" />
+      <recent name="E:\Projects\SKillbox\java_basics\08_ExceptionsDebuggingAndTesting\homework_8.2\SPBMetro" />
+      <recent name="E:\Projects\SKillbox\java_basics\08_ExceptionsDebuggingAndTesting\homework_8.1\ConsoleCustomerList" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="E:\Projects\SKillbox\java_basics\05_ArraysAndCollections\05-01-ReverseMassive" />
       <recent name="E:\Projects\SKillbox\java_basics\05_ArraysAndCollections\05-02-ArrayCommands" />
       <recent name="E:\Projects\SKillbox\java_basics\05_ArraysAndCollections\05-02-Temperatures" />
       <recent name="E:\Projects\SKillbox\java_basics\05_ArraysAndCollections\05-03-Cross" />
       <recent name="E:\Projects\SKillbox\java_basics\05_ArraysAndCollections\05-03-TreeSet" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="E:\Projects\SKillbox\java_basics\07_AdvancedOOPFeatures\homework_7.2\Employees" />
-      <recent name="E:\Projects\SKillbox\java_basics\08_ExceptionsDebuggingAndTesting\homework_8.2\SPBMetro" />
-      <recent name="E:\Projects\SKillbox\java_basics\08_ExceptionsDebuggingAndTesting\homework_8.1\ConsoleCustomerList" />
     </key>
   </component>
   <component name="RunManager" selected="Application.ArrayCommandScanner">
